@@ -10,5 +10,6 @@
 	</head>
     <body>
             <img src="images/日本.jpg" height="780" width="822" alt="">
+            <img src="images/日本.jpg" height="780" width="822" alt="">
     </body>
 </html>
