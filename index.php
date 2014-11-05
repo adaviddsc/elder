@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
+  <title>後青春的日子</title>
 	<head>
 		<meta charset="utf-8" />
     <meta name="google-site-verification" content="XFLWzNxG-0JQU8yG3B2TlUhqelQSp49V9UaKUZqy-eE" />
-    <!--<meta name="robots" content="index,follow" />
-    <meta name="description" content="喔一顆顆咖咖哭哭你妳哈哈喔喔" />
-    <meta name="keywords" content="喔一顆顆咖咖哭哭你妳哈哈喔喔,成大老老人,成大老老老人" />-->
+    <meta name="robots" content="index,follow" />
+    <meta name="keywords" content="後青春的日子" />
+    <meta name="description" content="老人養護,養老,老人,退休生活,後青春,不老騎士,祖父母,喪葬,生死,老人醫護,老年保健制度,安養院,不老的夢想" />
 
 
     <link rel="stylesheet" href="external/bootstrap-theme.min.css">
