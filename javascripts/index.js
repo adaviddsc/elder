@@ -34,9 +34,8 @@ $(function() {
 		    		var tempString = DecryptData(data,key,IV_A).toString();
 		    		if( tempString.length==48 ){
 		    			var IV_B = DecryptData(data,key,IV_A).toString(CryptoJS.enc.Utf8).substring(0,16);
-
-		    			var enc_data = EncryptData(username.toString(),key,IV_B);
-		    			alert(enc_data);
+		    			var enc_data = EncryptData(username,key,IV_B).toString();
+		    			enc_data = enc_data.replace(/\+/g, ",");
 		    			$.ajax({
 						    url: "../account/login-step2.php",
 						    data: "username="+username+"&enc_data="+enc_data+"",
@@ -44,13 +43,12 @@ $(function() {
 						    dataType: "json",
 						    success: function(response) {
 						    	$(".login-message").text(response[0].status);
-						    	alert("success");
-						    	/*if (response[0].status=="success"){
+						    	if (response[0].status=="success"){
 						    		$(".login-message").text("登入成功");
 						    	}
 						    	else{
-						    		$(".login-message").text("帳號或密碼錯誤");
-						    	}*/
+						    		$(".login-message").text("此區域為危險用戶!!!");
+						    	}
 						    },
 						    error: function( req, status, err ) {
 						    	console.log( 'something went wrong:', status, err );
