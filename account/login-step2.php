@@ -32,7 +32,7 @@ if (mysql_num_rows($result) > 0){
 else{
 	array_push($data,array( "status" => "error" ));
 }
-$sql = "UPDATE account SET IV_B = ''";
+$sql = "UPDATE account SET IV_B = '' WHERE username = '$username'";
 $result = mysql_query($sql);
 
 

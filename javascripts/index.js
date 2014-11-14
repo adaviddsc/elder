@@ -31,6 +31,7 @@ $(function() {
 		    success: function(response) {
 		    	var data = response[0].EncryptData;
 		    	if (data!="none"){
+		    		//$(".login-message").text(data);
 		    		var tempString = DecryptData(data,key,IV_A).toString();
 		    		if( tempString.length==48 ){
 		    			var IV_B = DecryptData(data,key,IV_A).toString(CryptoJS.enc.Utf8).substring(0,16);
@@ -57,7 +58,21 @@ $(function() {
 						});
 		    		}
 		    		else{
-		    			$(".login-message").text("帳號或密碼錯誤");
+		    			$.ajax({
+						    url: "../account/remove-IV_B.php",
+						    data: "username="+username+"",
+						    type: "post",
+						    dataType: "json",
+						    success: function(response) {
+						    	if(response[0].remove){
+						    		$(".login-message").text("帳號或密碼錯誤");
+						    	}
+						    },
+						    error: function( req, status, err ) {
+						    	console.log( 'something went wrong:', status, err );
+				      			alert('something went wrong:'+ status + err);
+						    }
+						});
 		    		}
 		    	}
 		    	else{
