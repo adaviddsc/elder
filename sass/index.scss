@@ -4,13 +4,13 @@ body {
 	font-size: 16px;
 	margin: 0;
 }
-.login-form{
+.login-form,.regist-form{
 	input{
 		display: inline-block;
 		width: 200px;
 		height: 35px;
 	}
-	.login-message{
+	.login-message,.regist-message{
 		margin: 0;
 		font-size: 16px;
 		color: #EC2424;

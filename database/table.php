@@ -3,8 +3,10 @@ $con = mysql_connect("localhost","root","a58105810");
 if (!$con){
 	die('Could not connect: ' . mysql_error());
 }
-// Create table in my_db database
 mysql_select_db("elder", $con);
+// Create table in my_db database
+/****************account**********************/
+
 $sql = "CREATE TABLE account 
 (
 	id int NOT NULL primary key auto_increment,
@@ -17,5 +19,22 @@ $sql = "CREATE TABLE account
 if (!mysql_query($sql,$con)){
 	die('Could not create table: ' . mysql_error());
 }
+
+/*********************************************/
+
+/****************temp**********************/
+
+$sql = "CREATE TABLE temp 
+(
+	id int NOT NULL primary key auto_increment,
+	value varchar(500),
+)";
+if (!mysql_query($sql,$con)){
+	die('Could not create table: ' . mysql_error());
+}
+
+/*********************************************/
+
+
 mysql_close($con);
 ?>

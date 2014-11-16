@@ -13,6 +13,10 @@ function DecryptData(data,key,iv){
 	return decrypt_data;
 }
 $(function() {
+	$(".temp1").attr("href",xss);
+	$(".temp").append(xss);
+	$(".session").append(session);
+
 	$(".login-button").on("click", function(event) {
 		var username = $(this).siblings('input[name=username]').val();
 		var password = $(this).siblings('input[name=password]').val();
@@ -43,7 +47,7 @@ $(function() {
 						    type: "post",
 						    dataType: "json",
 						    success: function(response) {
-						    	$(".login-message").text(response[0].status);
+						    	//$(".login-message").text(response[0].status);
 						    	if (response[0].status=="success"){
 						    		$(".login-message").text("登入成功");
 						    	}
@@ -85,6 +89,36 @@ $(function() {
 		    }
 		});
 	});
-
+	$(".regist-button").on("click", function(event) {
+		var username = $(this).siblings('input[name=username]').val();
+		var password = $(this).siblings('input[name=password]').val();
+		var password_again = $(this).siblings('input[name=password-again]').val();
+		$.ajax({
+		    url: "../account/regist.php",
+		    data: "username="+username+"&password="+password+"&password_again="+password_again+"",
+		    type: "post",
+		    dataType: "json",
+		    success: function(response) {
+		    	//alert(response[0].status);
+		    	//$(".login-message").text(response[0].status);
+		    	if (response[0].status=="success"){
+		    		$(".regist-message").text("註冊成功");
+		    	}
+		    	else if (response[0].status=="again"){
+		    		$(".regist-message").text("資料有誤或不完整，請重新填寫");
+		    	}
+		    	else if (response[0].status=="used"){
+		    		$(".regist-message").text("此帳號已有人使用");
+		    	}
+		    	else{
+		    		$(".regist-message").text("資料包含非法字元，請重新填寫");
+		    	}
+		    },
+		    error: function( req, status, err ) {
+		    	console.log( 'something went wrong:', status, err );
+      			alert('something went wrong:'+ status + err);
+		    }
+		});
+	});
 });
 

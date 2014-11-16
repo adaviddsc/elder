@@ -1,26 +1,29 @@
 <?php
+session_start();
 ob_start();
-session_start(); 
 include("connect.php");
-$data = array();
+$dsn = "mysql:host=$host_name;dbname=$db_name";
+$db = new PDO($dsn, $user_name, $password);
+$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
+
 
 $username = $_POST['username'];
 $enc_data = $_POST['enc_data'];
 $enc_data = str_replace(",","+",$enc_data);
-$sql = "SELECT username,password,IV_B FROM account WHERE username = '$username'";
-$result = mysql_query($sql);
+$data = array();
 
+$stmt_S_acc = $db->prepare("SELECT username,password,IV_B FROM account WHERE username =?");
+$stmt_S_acc->execute(array($username));
+if ( $result = $stmt_S_acc->fetch() ){
 
-if (mysql_num_rows($result) > 0){
-
-	$row = mysql_fetch_row($result);
-	$username_fetch = $row[0];
-	$key = substr(md5($row[1]),0,16);
-	$IV_B = substr($row[2],0,16);
-
+	$username_fetch = $result->username;
+	$key = substr(md5($result->password),0,16);
+	$IV_B = substr($result->IV_B,0,16);
+	$stmt_S_acc->closeCursor();
 	$EncryptData = base64_encode(mcrypt_encrypt(MCRYPT_RIJNDAEL_128, $key, $username_fetch, MCRYPT_MODE_CBC, $IV_B));
 
 	if( $enc_data==$EncryptData ){
+		$_SESSION['username'] = $result->username;
 		array_push($data,array( "status" => "success" ));
 		//成功登入區塊
 	}
@@ -32,10 +35,13 @@ if (mysql_num_rows($result) > 0){
 else{
 	array_push($data,array( "status" => "error" ));
 }
-$sql = "UPDATE account SET IV_B = '' WHERE username = '$username'";
-$result = mysql_query($sql);
+$stmt_U_acc = $db->prepare("UPDATE account SET IV_B = '' WHERE username =?");
+$stmt_U_acc->execute(array($username));
+$stmt_U_acc->closeCursor();
 
 
+
+$db = null;
 ob_end_clean();
 echo json_encode($data);
 flush();

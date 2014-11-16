@@ -1,25 +1,23 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php
-//---abstracted ! ------
-class connection{
-    public $host ="localhost";
-    public $user = "root"; 
-    public $password = "a58105810";
-    public $db="elder";
-    public $dbc;
-    
-    function __construct() {
-        $con = mysqli_connect($this->host, $this->user, $this->password, $this->db);
-        
-        if(mysqli_errno($con)){
-            echo"sum error";
-            
-        }
-        else{
-           $this->dbc = $con; // assign $con to $dbc
-           echo"connected ";
-        }
-    }
-}
+//資料庫設定
+//資料庫位置
+$db_server = "localhost";
+//資料庫名稱
+$db_name = "elder";
+//資料庫管理者帳號
+$db_user = "root";
+//資料庫管理者密碼
+$db_passwd = "a58105810";
 
+//對資料庫連線
+if(!@mysql_connect($db_server, $db_user, $db_passwd))
+        die("無法對資料庫連線");
 
-?>
+//資料庫連線採UTF8
+mysql_query("SET NAMES utf8");
+
+//選擇資料庫
+if(!@mysql_select_db($db_name))
+        die("無法使用資料庫");
+?> 

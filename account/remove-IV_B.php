@@ -1,16 +1,18 @@
 <?php
 ob_start();
-session_start(); 
 include("connect.php");
-$data = array();
+$dsn = "mysql:host=$host_name;dbname=$db_name";
+$db = new PDO($dsn, $user_name, $password);
+$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
 
 $username = $_POST['username'];
+$data = array();
 
-
-$sql = "UPDATE account SET IV_B = '' WHERE username = '$username'";
-$result = mysql_query($sql);
+$stmt_U_acc = $db->prepare("UPDATE account SET IV_B = '' WHERE username=?");
+$stmt_U_acc->execute(array($username));
+$stmt_U_acc->closeCursor();
 array_push($data,array( "remove" => "success" ));
-
+$db = null;
 ob_end_clean();
 echo json_encode($data);
 flush();

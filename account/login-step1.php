@@ -1,40 +1,40 @@
 <?php
 ob_start();
+include("connect.php");
+$dsn = "mysql:host=$host_name;dbname=$db_name";
+$db = new PDO($dsn, $user_name, $password);
+$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
 
-$mysqli = new mysqli("localhost", "root", "a58105810", "elder");
-if (mysqli_connect_errno()) {
-    printf("Connect failed: %s\n", mysqli_connect_error());
-    exit();
-}
-
+$pattern = "/^([0-9A-Za-z@._-]+)$/";
+$username = $_POST['username'];
+$IV_A = $_POST['IV_A'];
 $data = array();
 
-$username = $_POST['username'];
-$username = mysql_escape_string($username);
-$IV_A = $_POST['IV_A'];
+if(preg_match($pattern,$username)){
+	$stmt_S_acc = $db->prepare("SELECT password FROM account WHERE username=?");
+	$stmt_S_acc->execute(array($username));
+	if( $result = $stmt_S_acc->fetch() ){
 
-$stmt_S_acc = $mysqli->prepare("SELECT password FROM account WHERE username=?");
-$stmt_S_acc->bind_param("s", $username);
-$stmt_S_acc->execute();
-$stmt_S_acc->bind_result($password);
-if( $stmt_S_acc->fetch() ){
+		$key = substr(md5($result->password),0,16);
+		$IV_B = substr(md5(rand()),0,24);
+		$stmt_S_acc->closeCursor();
 
-	$key = substr(md5($password),0,16);
-	$IV_B = substr(md5(rand()),0,24);
-	$stmt_S_acc->close();
-
-	$stmt_U_acc = $mysqli->prepare("UPDATE account SET IV_B = '$IV_B' WHERE username=?");
-	$stmt_U_acc->bind_param("s", $username);
-    $stmt_U_acc->execute();
-    $stmt_U_acc->close();
-    $EncryptData = base64_encode(mcrypt_encrypt(MCRYPT_RIJNDAEL_128, $key, $IV_B, MCRYPT_MODE_CBC, $IV_A));
-	array_push($data,array( "EncryptData" => $EncryptData ));
+		$stmt_U_acc = $db->prepare("UPDATE account SET IV_B = '$IV_B' WHERE username=?");
+	    $stmt_U_acc->execute(array($username));
+	    $stmt_U_acc->closeCursor();
+	    $EncryptData = base64_encode(mcrypt_encrypt(MCRYPT_RIJNDAEL_128, $key, $IV_B, MCRYPT_MODE_CBC, $IV_A));
+		array_push($data,array( "EncryptData" => $EncryptData ));
+	}
+	else{
+		array_push($data,array( "EncryptData" => "none" ));
+	}
 }
 else{
 	array_push($data,array( "EncryptData" => "none" ));
 }
 
-$mysqli->close();
+
+$db = null;
 ob_end_clean();
 echo json_encode($data);
 flush();
