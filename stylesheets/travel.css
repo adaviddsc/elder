@@ -1,0 +1,508 @@
+/* line 1, ../sass/travel.scss */
+body {
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 7, ../sass/travel.scss */
+.travel-container {
+  width: 100%;
+  overflow: auto;
+  position: relative;
+  height: 100%;
+}
+/* line 12, ../sass/travel.scss */
+.travel-container .travel-leftMap {
+  width: 50%;
+  float: left;
+}
+/* line 16, ../sass/travel.scss */
+.travel-container .travel-rightContain {
+  width: 50%;
+  float: right;
+  position: relative;
+}
+/* line 21, ../sass/travel.scss */
+.travel-container .travel-rightContain .travel-header {
+  width: 100%;
+  background: #F0F0F0;
+  position: relative;
+  border-bottom: 3px solid #CBCBCB;
+  box-shadow: 0 1px 2px #E8E8E8;
+}
+/* line 27, ../sass/travel.scss */
+.travel-container .travel-rightContain .travel-header .travel-planeIcon {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 2px solid #444;
+  color: #444;
+  font-size: 20px;
+  padding: 4px;
+  margin: 16px 10px 16px 16px;
+}
+/* line 37, ../sass/travel.scss */
+.travel-container .travel-rightContain .travel-header .travel-name {
+  display: inline-block;
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0;
+}
+/* line 43, ../sass/travel.scss */
+.travel-container .travel-rightContain .travel-header .travel-addArticle {
+  width: 125px;
+  height: 40px;
+  background: #4D668E;
+  color: #FFF;
+  float: right;
+  border-radius: 5px;
+  border: 2px solid #fff;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  font-size: 19px;
+  line-height: 37px;
+  padding-left: 10px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  -webkit-transition: .2s linear;
+}
+/* line 44, ../sass/travel.scss */
+.travel-container .travel-rightContain .travel-header .travel-addArticle i {
+  font-size: 18px;
+  margin-right: 3px;
+}
+/* line 64, ../sass/travel.scss */
+.travel-container .travel-rightContain .travel-header .travel-addArticle:hover {
+  opacity: .8;
+  text-shadow: 0 1px 2px #333;
+}
+/* line 70, ../sass/travel.scss */
+.travel-container .travel-rightContain .travel-body {
+  background: #fff;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+/* line 75, ../sass/travel.scss */
+.travel-container .travel-rightContain .travel-body .travel-bodyLeft {
+  width: 50%;
+  height: 100%;
+  float: left;
+  border-right: 1px solid #eee;
+}
+/* line 82, ../sass/travel.scss */
+.travel-container .travel-rightContain .travel-body .travel-bodyRight {
+  width: 50%;
+  height: 100%;
+  float: right;
+}
+/* line 88, ../sass/travel.scss */
+.travel-container .travel-rightContain .travel-body .travel-bodyContain .travel-box {
+  width: 90%;
+  height: 350px;
+  margin: 0 auto;
+  margin-top: 17px;
+  box-shadow: 0 1px 3px #949494;
+  border-radius: 5px;
+}
+/* line 95, ../sass/travel.scss */
+.travel-container .travel-rightContain .travel-body .travel-bodyContain .travel-box .travel-boxImg {
+  width: 100%;
+  height: 250px;
+}
+/* line 98, ../sass/travel.scss */
+.travel-container .travel-rightContain .travel-body .travel-bodyContain .travel-box .travel-boxImg img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  cursor: pointer;
+}
+/* line 104, ../sass/travel.scss */
+.travel-container .travel-rightContain .travel-body .travel-bodyContain .travel-box .travel-boxImg img:hover {
+  opacity: .8;
+  -webkit-transition: .2s linear;
+}
+/* line 110, ../sass/travel.scss */
+.travel-container .travel-rightContain .travel-body .travel-bodyContain .travel-box .travel-boxBottom {
+  width: 100%;
+  height: 100px;
+}
+/* line 113, ../sass/travel.scss */
+.travel-container .travel-rightContain .travel-body .travel-bodyContain .travel-box .travel-boxBottom .travel-title {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 50px;
+  margin: 0;
+  font-size: 21px;
+  text-align: center;
+  line-height: 50px;
+  display: block;
+  color: #303030;
+}
+/* line 126, ../sass/travel.scss */
+.travel-container .travel-rightContain .travel-body .travel-bodyContain .travel-box .travel-boxBottom .travel-selfInfo {
+  height: 50px;
+}
+/* line 128, ../sass/travel.scss */
+.travel-container .travel-rightContain .travel-body .travel-bodyContain .travel-box .travel-boxBottom .travel-selfInfo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 10px;
+  cursor: pointer;
+}
+/* line 134, ../sass/travel.scss */
+.travel-container .travel-rightContain .travel-body .travel-bodyContain .travel-box .travel-boxBottom .travel-selfInfo img:hover {
+  opacity: .8;
+  -webkit-transition: .2s linear;
+}
+/* line 139, ../sass/travel.scss */
+.travel-container .travel-rightContain .travel-body .travel-bodyContain .travel-box .travel-boxBottom .travel-selfInfo .travel-selfName {
+  margin: 0;
+  font-size: 16px;
+  display: inline-block;
+  margin-left: 5px;
+  width: 70px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* line 149, ../sass/travel.scss */
+.travel-container .travel-rightContain .travel-body .travel-bodyContain .travel-box .travel-boxBottom .travel-selfInfo #travel-like {
+  font-size: 20px;
+  color: #797979;
+  float: right;
+  margin: 8px 4px 8px 0px;
+  cursor: pointer;
+}
+/* line 155, ../sass/travel.scss */
+.travel-container .travel-rightContain .travel-body .travel-bodyContain .travel-box .travel-boxBottom .travel-selfInfo #travel-like .like-count {
+  font-size: 16px;
+  margin: 0px 0 0 5px;
+  width: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  line-height: 14px;
+  border-right: 1px solid #ADADAD;
+}
+/* line 166, ../sass/travel.scss */
+.travel-container .travel-rightContain .travel-body .travel-bodyContain .travel-box .travel-boxBottom .travel-selfInfo #travel-like:hover {
+  color: #333B3C;
+  -webkit-transition: .2s linear;
+}
+/* line 171, ../sass/travel.scss */
+.travel-container .travel-rightContain .travel-body .travel-bodyContain .travel-box .travel-boxBottom .travel-selfInfo .findPosition {
+  font-size: 21px;
+  float: right;
+  margin: 6px 13px 6px 6px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #6E6E6E;
+  color: #fff;
+  padding: 2px 6px 0;
+  cursor: pointer;
+}
+/* line 182, ../sass/travel.scss */
+.travel-container .travel-rightContain .travel-body .travel-bodyContain .travel-box .travel-boxBottom .travel-selfInfo .findPosition:hover {
+  color: #333B3C;
+  -webkit-transition: .2s linear;
+  background: #fff;
+}
+
+/* line 199, ../sass/travel.scss */
+#myModal-addTravel .modal-dialog .modal-content .modal-header {
+  background: #4D668E;
+  height: 50px;
+  padding: 7px;
+}
+/* line 203, ../sass/travel.scss */
+#myModal-addTravel .modal-dialog .modal-content .modal-header .dialog-travel-addArticle {
+  width: 125px;
+  height: 40px;
+  color: #FFF;
+  font-size: 19px;
+  line-height: 37px;
+  padding-left: 10px;
+  letter-spacing: 2px;
+}
+/* line 204, ../sass/travel.scss */
+#myModal-addTravel .modal-dialog .modal-content .modal-header .dialog-travel-addArticle i {
+  font-size: 18px;
+  margin-right: 3px;
+}
+/* line 218, ../sass/travel.scss */
+#myModal-addTravel .modal-dialog .modal-content .modal-body .item-info {
+  position: relative;
+  width: 100%;
+  border: 2px solid #2E3B5E;
+  border-radius: 8px;
+}
+/* line 224, ../sass/travel.scss */
+#myModal-addTravel .modal-dialog .modal-content .modal-body .item-info .item-info-form {
+  width: 100%;
+  padding: 10px;
+  overflow: auto;
+}
+/* line 228, ../sass/travel.scss */
+#myModal-addTravel .modal-dialog .modal-content .modal-body .item-info .item-info-form .item-info-images {
+  width: 100%;
+  margin-bottom: 10px;
+  text-align: center;
+}
+/* line 232, ../sass/travel.scss */
+#myModal-addTravel .modal-dialog .modal-content .modal-body .item-info .item-info-form .item-info-images div {
+  font-size: 20rem;
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+}
+/* line 238, ../sass/travel.scss */
+#myModal-addTravel .modal-dialog .modal-content .modal-body .item-info .item-info-form .item-info-images div:hover, #myModal-addTravel .modal-dialog .modal-content .modal-body .item-info .item-info-form .item-info-images img:hover {
+  opacity: .5;
+}
+/* line 241, ../sass/travel.scss */
+#myModal-addTravel .modal-dialog .modal-content .modal-body .item-info .item-info-form .item-info-images img {
+  cursor: pointer;
+  max-width: 100%;
+  max-height: 300px;
+}
+/* line 247, ../sass/travel.scss */
+#myModal-addTravel .modal-dialog .modal-content .modal-body .item-info .item-info-form .item-info-tags {
+  position: absolute;
+  width: 30px;
+  float: left;
+}
+/* line 251, ../sass/travel.scss */
+#myModal-addTravel .modal-dialog .modal-content .modal-body .item-info .item-info-form .item-info-tags .fa-tag {
+  padding-top: 4px;
+  font-size: 2.5rem;
+}
+/* line 255, ../sass/travel.scss */
+#myModal-addTravel .modal-dialog .modal-content .modal-body .item-info .item-info-form .item-info-tags .glyphicon-gift {
+  padding-top: 12px;
+  font-size: 2.3rem;
+}
+/* line 259, ../sass/travel.scss */
+#myModal-addTravel .modal-dialog .modal-content .modal-body .item-info .item-info-form .item-info-tags .fa-map-marker {
+  padding-top: 11px;
+  font-size: 2.8rem;
+  padding-left: 3px;
+}
+/* line 264, ../sass/travel.scss */
+#myModal-addTravel .modal-dialog .modal-content .modal-body .item-info .item-info-form .item-info-tags .glyphicon-phone-alt {
+  padding-top: 13px;
+  font-size: 2.1rem;
+}
+/* line 268, ../sass/travel.scss */
+#myModal-addTravel .modal-dialog .modal-content .modal-body .item-info .item-info-form .item-info-tags .fa-pencil-square-o {
+  padding-top: 75px;
+  font-size: 2.4rem;
+}
+/* line 273, ../sass/travel.scss */
+#myModal-addTravel .modal-dialog .modal-content .modal-body .item-info .item-info-form .item-info-items {
+  position: relative;
+  padding-left: 30px;
+  width: 100%;
+  float: right;
+}
+/* line 278, ../sass/travel.scss */
+#myModal-addTravel .modal-dialog .modal-content .modal-body .item-info .item-info-form .item-info-items .item-info-items-div1 {
+  width: 100%;
+  padding-right: 210px;
+}
+/* line 282, ../sass/travel.scss */
+#myModal-addTravel .modal-dialog .modal-content .modal-body .item-info .item-info-form .item-info-items .item-info-items-div1 input[type=text] {
+  width: 100%;
+  float: left;
+  height: 30px;
+}
+/* line 288, ../sass/travel.scss */
+#myModal-addTravel .modal-dialog .modal-content .modal-body .item-info .item-info-form .item-info-items .item-info-items-div2 {
+  width: 100%;
+}
+/* line 290, ../sass/travel.scss */
+#myModal-addTravel .modal-dialog .modal-content .modal-body .item-info .item-info-form .item-info-items .item-info-items-div2 input[type=text] {
+  width: 49.15%;
+  height: 30px;
+}
+/* line 294, ../sass/travel.scss */
+#myModal-addTravel .modal-dialog .modal-content .modal-body .item-info .item-info-form .item-info-items .item-info-items-div2 .phone1 {
+  float: left;
+}
+/* line 297, ../sass/travel.scss */
+#myModal-addTravel .modal-dialog .modal-content .modal-body .item-info .item-info-form .item-info-items .item-info-items-div2 .phone2 {
+  float: right;
+}
+/* line 301, ../sass/travel.scss */
+#myModal-addTravel .modal-dialog .modal-content .modal-body .item-info .item-info-form .item-info-items input[type=date] {
+  width: 200px;
+  float: right;
+  height: 30px;
+}
+/* line 306, ../sass/travel.scss */
+#myModal-addTravel .modal-dialog .modal-content .modal-body .item-info .item-info-form .item-info-items input {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 10px;
+}
+/* line 311, ../sass/travel.scss */
+#myModal-addTravel .modal-dialog .modal-content .modal-body .item-info .item-info-form .item-info-items textarea {
+  height: 150px;
+  resize: none;
+}
+/* line 315, ../sass/travel.scss */
+#myModal-addTravel .modal-dialog .modal-content .modal-body .item-info .item-info-form .item-info-items #item-info-twzipcode {
+  width: 180px;
+  height: 30px;
+  float: left;
+  position: relative;
+  z-index: 1;
+}
+/* line 321, ../sass/travel.scss */
+#myModal-addTravel .modal-dialog .modal-content .modal-body .item-info .item-info-form .item-info-items #item-info-twzipcode #item-info-county, #myModal-addTravel .modal-dialog .modal-content .modal-body .item-info .item-info-form .item-info-items #item-info-twzipcode #item-info-district {
+  float: left;
+  margin-right: 5px;
+}
+/* line 324, ../sass/travel.scss */
+#myModal-addTravel .modal-dialog .modal-content .modal-body .item-info .item-info-form .item-info-items #item-info-twzipcode #item-info-county select, #myModal-addTravel .modal-dialog .modal-content .modal-body .item-info .item-info-form .item-info-items #item-info-twzipcode #item-info-district select {
+  height: 30px;
+  width: 85px;
+  padding: 0px;
+}
+/* line 330, ../sass/travel.scss */
+#myModal-addTravel .modal-dialog .modal-content .modal-body .item-info .item-info-form .item-info-items #item-info-twzipcode #item-info-zipcode {
+  display: none;
+}
+/* line 334, ../sass/travel.scss */
+#myModal-addTravel .modal-dialog .modal-content .modal-body .item-info .item-info-form .item-info-items .item-info-twzipcode-address {
+  width: 100%;
+  float: left;
+  margin-left: -180px;
+  padding-left: 180px;
+}
+/* line 340, ../sass/travel.scss */
+#myModal-addTravel .modal-dialog .modal-content .modal-body .item-info .item-info-form .item-info-items .myButtonDonate {
+  background: #429396;
+  color: #FFF;
+  border-radius: 5px;
+  font-size: 18px;
+  line-height: 37px;
+  padding-left: 10px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  -webkit-transition: .2s linear;
+  border: none;
+  border-bottom: 2px solid #1F6267;
+  line-height: 32px;
+  margin-top: 20px;
+  width: 90px;
+  float: right;
+  height: 35px;
+  margin-bottom: 0px;
+}
+/* line 358, ../sass/travel.scss */
+#myModal-addTravel .modal-dialog .modal-content .modal-body .item-info .item-info-form .item-info-items .myButtonDonate:hover {
+  opacity: .7;
+}
+
+/* line 374, ../sass/travel.scss */
+#myModal-travelInfo .modal-dialog .modal-content .modal-body {
+  padding: 0;
+}
+/* line 376, ../sass/travel.scss */
+#myModal-travelInfo .modal-dialog .modal-content .modal-body img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+/* line 382, ../sass/travel.scss */
+#myModal-travelInfo .modal-dialog .modal-content .modal-footer .dialog-travelInfo-title {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 24px;
+  text-align: center;
+}
+/* line 390, ../sass/travel.scss */
+#myModal-travelInfo .modal-dialog .modal-content .modal-footer .dialog-travelInfo-address {
+  font-size: 22px;
+  width: 100%;
+  text-align: left;
+  margin: 5px 0 0;
+  line-height: 25px;
+  height: 25px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* line 400, ../sass/travel.scss */
+#myModal-travelInfo .modal-dialog .modal-content .modal-footer .dialog-travelInfo-address h1 {
+  display: inline-block;
+  letter-spacing: 2px;
+  margin: 0;
+  font-size: 16px;
+  margin-left: 5px;
+}
+/* line 409, ../sass/travel.scss */
+#myModal-travelInfo .modal-dialog .modal-content .modal-footer .travelInfo-iconInfo {
+  line-height: 30px;
+  height: 30px;
+  /*.travelInfo-date{
+  	margin: 0;
+  	font-size: 16px;
+  	color: #797979;
+  	display: inline-block;
+  }*/
+}
+/* line 412, ../sass/travel.scss */
+#myModal-travelInfo .modal-dialog .modal-content .modal-footer .travelInfo-iconInfo i {
+  font-size: 20px;
+  color: #797979;
+  display: inline-block;
+  cursor: pointer;
+}
+/* line 417, ../sass/travel.scss */
+#myModal-travelInfo .modal-dialog .modal-content .modal-footer .travelInfo-iconInfo i h2 {
+  font-size: 14px;
+  margin: 0px;
+  width: 75px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  line-height: 14px;
+  border-right: 1px solid #ADADAD;
+}
+/* line 428, ../sass/travel.scss */
+#myModal-travelInfo .modal-dialog .modal-content .modal-footer .travelInfo-iconInfo i .like-count {
+  width: 50px;
+  text-align: left;
+  margin-right: 5px;
+}
+/* line 433, ../sass/travel.scss */
+#myModal-travelInfo .modal-dialog .modal-content .modal-footer .travelInfo-iconInfo i .travelInfo-date {
+  border: none;
+}
+/* line 436, ../sass/travel.scss */
+#myModal-travelInfo .modal-dialog .modal-content .modal-footer .travelInfo-iconInfo i:hover {
+  color: #333B3C;
+  -webkit-transition: .2s linear;
+}
+/* line 449, ../sass/travel.scss */
+#myModal-travelInfo .modal-dialog .modal-content .modal-footer .dialog-travelInfo-text {
+  max-height: 250px;
+  text-align: left;
+  border: 1px solid #C0C0C0;
+  padding: 5px 8px;
+  border-radius: 5px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}

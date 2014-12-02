@@ -1,8 +1,10 @@
 <?php
 session_start();
 ob_start();
+$data = array();
+
 include("connect.php");
-$dsn = "mysql:host=$host_name;dbname=$db_name";
+$dsn = "mysql:host=$host_name;dbname=$db_name;charset=utf8";
 $db = new PDO($dsn, $user_name, $password);
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
 
@@ -10,7 +12,7 @@ $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
 $username = $_POST['username'];
 $enc_data = $_POST['enc_data'];
 $enc_data = str_replace(",","+",$enc_data);
-$data = array();
+
 
 $stmt_S_acc = $db->prepare("SELECT username,password,IV_B FROM account WHERE username =?");
 $stmt_S_acc->execute(array($username));

@@ -1,0 +1,13 @@
+/* line 3, ../sass/self.scss */
+#myModal-addSelf .modal-dialog .modal-content {
+  width: 400px;
+  margin: 0 auto;
+}
+/* line 8, ../sass/self.scss */
+#myModal-addSelf .modal-dialog .modal-content .modal-body form #add-selfPhoto {
+  font-size: 30px;
+}
+/* line 13, ../sass/self.scss */
+#myModal-addSelf .modal-dialog .modal-content .modal-body input {
+  margin-bottom: 5px;
+}

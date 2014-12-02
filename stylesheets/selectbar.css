@@ -1,0 +1,39 @@
+ul,ol{
+	margin:0px;
+	padding:0px;
+	list-style-type:none;
+}
+
+#selectbar{
+	width:1000px;
+	height:50px;
+	
+}
+#selectbar ul li{
+	float:left;
+	line-height:50px;
+	padding:0px 30px;
+	position:relative;
+}
+#selectbar ul li a{
+	color:#000000;
+	text-decoration:none;
+	font-size:250%;
+}
+/*首頁子選項先隱藏還沒做
+#selectbar ul li:hover .subsel{
+	display:block;
+
+	
+}*/
+#selectbar ul li .subsel{
+	position:absolute;
+	display:none;
+	width:200px;
+	
+}
+#selectbar ul li ol li{
+	float:none;
+	line-height:25px;
+	padding:15px;
+}

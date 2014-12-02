@@ -1,0 +1,52 @@
+/* line 1, ../sass/header.scss */
+.travel-selectBar {
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: #000;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+/* line 10, ../sass/header.scss */
+.travel-selectBar li {
+  display: inline-block;
+}
+/* line 12, ../sass/header.scss */
+.travel-selectBar li a {
+  margin: 0;
+  color: #fff;
+  display: inline-block;
+  font-size: 16px;
+  height: 50px;
+  width: 90px;
+  line-height: 50px;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+}
+/* line 23, ../sass/header.scss */
+.travel-selectBar li a span {
+  width: 17px;
+  height: 17px;
+  display: block;
+  background: #45A07A;
+  transform: rotate(45deg);
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: -9px;
+}
+/* line 38, ../sass/header.scss */
+.travel-selectBar li:hover {
+  -webkit-transition: .2s linear;
+  background: #45A07A;
+}
+/* line 44, ../sass/header.scss */
+.travel-selectBar .active a {
+  background: #45A07A;
+  border-bottom: 3px solid #28847A;
+}

@@ -13,10 +13,16 @@ function DecryptData(data,key,iv){
 	return decrypt_data;
 }
 $(function() {
-	$(".temp1").attr("href",xss);
+	/*$(".temp1").attr("href",xss);
 	$(".temp").append(xss);
-	$(".session").append(session);
+	$(".session").append(session);*/
 
+	var page = "";
+	$(".enter-door").on("click", function(event) {
+		if ($(this).attr("page")!=undefined){
+			page = $(this).attr("page");
+		}
+	});
 	$(".login-button").on("click", function(event) {
 		var username = $(this).siblings('input[name=username]').val();
 		var password = $(this).siblings('input[name=password]').val();
@@ -34,8 +40,8 @@ $(function() {
 		    dataType: "json",
 		    success: function(response) {
 		    	var data = response[0].EncryptData;
+		    	//$(".login-message").text(data);
 		    	if (data!="none"){
-		    		//$(".login-message").text(data);
 		    		var tempString = DecryptData(data,key,IV_A).toString();
 		    		if( tempString.length==48 ){
 		    			var IV_B = DecryptData(data,key,IV_A).toString(CryptoJS.enc.Utf8).substring(0,16);
@@ -50,6 +56,9 @@ $(function() {
 						    	//$(".login-message").text(response[0].status);
 						    	if (response[0].status=="success"){
 						    		$(".login-message").text("登入成功");
+						    		if (page!=""){
+						    			document.location.href=page;
+						    		}
 						    	}
 						    	else{
 						    		$(".login-message").text("此區域為危險用戶!!!");

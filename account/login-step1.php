@@ -1,7 +1,7 @@
 <?php
 ob_start();
 include("connect.php");
-$dsn = "mysql:host=$host_name;dbname=$db_name";
+$dsn = "mysql:host=$host_name;dbname=$db_name;charset=utf8";
 $db = new PDO($dsn, $user_name, $password);
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
 
@@ -10,7 +10,7 @@ $username = $_POST['username'];
 $IV_A = $_POST['IV_A'];
 $data = array();
 
-if(preg_match($pattern,$username)){
+if(preg_match($pattern,$username) && !isset($username[30]) ){
 	$stmt_S_acc = $db->prepare("SELECT password FROM account WHERE username=?");
 	$stmt_S_acc->execute(array($username));
 	if( $result = $stmt_S_acc->fetch() ){

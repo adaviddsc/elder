@@ -1,0 +1,19 @@
+#myModal-addSelf{
+	.modal-dialog{
+		.modal-content{
+			width: 400px;
+			margin: 0 auto;
+			.modal-body{
+				form{
+					#add-selfPhoto{
+						font-size: 30px;
+					}
+				}
+				
+				input{
+					margin-bottom: 5px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,461 @@
+body{
+	font-size: 16px;
+	width: 100%;
+	height: 100%;
+}
+
+.travel-container{
+	width: 100%;
+	overflow: auto;
+	position: relative;
+	height: 100%;
+	.travel-leftMap{
+		width: 50%;
+		float: left;
+	}
+	.travel-rightContain{
+		width: 50%;
+		float: right;
+		position: relative;
+		
+		.travel-header{
+			width: 100%;
+			background: #F0F0F0;
+			position: relative;
+			border-bottom: 3px solid #CBCBCB;
+			box-shadow: 0 1px 2px #E8E8E8;
+			.travel-planeIcon{
+				height: 30px;
+				width: 30px;
+				border-radius: 50%;
+				border: 2px solid #444;
+				color: #444;
+				font-size: 20px;
+				padding: 4px;
+				margin: 16px 10px 16px 16px;
+			}
+			.travel-name{
+				display: inline-block;
+				font-size: 25px;
+				font-weight: bold;
+				margin: 0;
+			}
+			.travel-addArticle{
+				i{
+					font-size: 18px;
+					margin-right: 3px;
+				}
+				width: 125px;
+				height: 40px;
+				background: #4D668E;
+				color: #FFF;
+				float: right;
+				border-radius: 5px;
+				border: 2px solid #fff;
+				position: absolute;
+				bottom: 0px;
+				right: 0px;
+				font-size: 19px;
+				line-height: 37px;
+				padding-left: 10px;
+				letter-spacing: 2px;
+				cursor: pointer;
+				-webkit-transition: .2s linear;
+				&:hover{
+					opacity: .8;
+					text-shadow: 0 1px 2px #333;
+				}
+			}
+		}
+		.travel-body{
+			background: #fff;
+			width: 100%;
+			overflow-y: scroll;
+			overflow-x: hidden;
+			.travel-bodyLeft{
+				width: 50%;
+				height: 100%;
+				float: left;
+				border-right: 1px solid #eee;
+				
+			}
+			.travel-bodyRight{
+				width: 50%;
+				height: 100%;
+				float: right;
+			}
+			.travel-bodyContain{
+				.travel-box{
+					width: 90%;
+					height: 350px;
+					margin: 0 auto;
+					margin-top: 17px;
+					box-shadow: 0 1px 3px #949494;
+					border-radius: 5px;
+					.travel-boxImg{
+						width: 100%;
+						height: 250px;
+						img{
+							width: 100%;
+							height: 100%;
+							border-top-left-radius: 5px;
+							border-top-right-radius: 5px;
+							cursor: pointer;
+							&:hover{
+								opacity: .8;
+								-webkit-transition: .2s linear;
+							}
+						}
+					}
+					.travel-boxBottom{
+						width: 100%;
+						height: 100px;
+						.travel-title{
+							width: 100%;
+							overflow: hidden;
+							text-overflow: ellipsis;
+							white-space: nowrap;
+							height: 50px;
+							margin: 0;
+							font-size: 21px;
+							text-align: center;
+							line-height: 50px;
+							display: block;
+							color: #303030;
+						}
+						.travel-selfInfo{
+							height: 50px;
+							img{
+								width: 40px;
+								height: 40px;
+								border-radius: 50%;
+								margin-left: 10px;
+								cursor: pointer;
+								&:hover{
+									opacity: .8;
+									-webkit-transition: .2s linear;
+								}
+							}
+							.travel-selfName{
+								margin: 0;
+								font-size: 16px;
+								display: inline-block;
+								margin-left: 5px;
+								width: 70px;
+								overflow: hidden;
+								text-overflow: ellipsis;
+								white-space: nowrap;
+							}
+							#travel-like{
+								font-size: 20px;
+								color: #797979;
+								float: right;
+								margin: 8px 4px 8px 0px;
+								cursor: pointer;
+								.like-count{
+									font-size: 16px;
+									margin: 0px 0 0 5px;
+									width: 50px;
+									overflow: hidden;
+									text-overflow: ellipsis;
+									white-space: nowrap;
+									display: inline-block;
+									line-height: 14px;
+									border-right: 1px solid #ADADAD;
+								}
+								&:hover{
+									color: #333B3C;
+									-webkit-transition: .2s linear;
+								}
+							}
+							.findPosition{
+								font-size: 21px;
+								float: right;
+								margin: 6px 13px 6px 6px;
+								width: 25px;
+								height: 25px;
+								border-radius: 50%;
+								background: #6E6E6E;
+								color: #fff;
+								padding: 2px 6px 0;
+								cursor: pointer;
+								&:hover{
+									color: #333B3C;
+									-webkit-transition: .2s linear;
+									background: #fff;
+								}
+							}
+							
+						}
+					}
+				}
+			}
+		}
+	}
+}
+#myModal-addTravel{
+	.modal-dialog{
+		.modal-content{		
+			.modal-header{
+				background: #4D668E;
+				height: 50px;
+				padding: 7px;
+				.dialog-travel-addArticle{
+					i{
+						font-size: 18px;
+						margin-right: 3px;
+					}
+					width: 125px;
+					height: 40px;
+					color: #FFF;
+					font-size: 19px;
+					line-height: 37px;
+					padding-left: 10px;
+					letter-spacing: 2px;
+				}
+			}
+			.modal-body{
+				.item-info{
+					position: relative;
+					width: 100%;
+					border: 2px solid #2E3B5E;
+					border-radius: 8px;
+
+					.item-info-form{
+						width: 100%;
+						padding: 10px;
+						overflow: auto;
+						.item-info-images{
+							width: 100%;
+							margin-bottom: 10px;				
+							text-align: center;
+							div{
+								font-size: 20rem;
+								width: 200px;
+								height: 200px;
+								cursor: pointer;
+							}
+							div:hover,img:hover{
+								opacity: .5;
+							}
+							img{
+								cursor: pointer;
+								max-width: 100%;
+								max-height: 300px;
+							}
+						}
+						.item-info-tags{
+							position: absolute;
+							width: 30px;
+							float: left;
+							.fa-tag{
+								padding-top: 4px;
+								font-size: 2.5rem;
+							}
+							.glyphicon-gift{
+								padding-top: 12px;
+								font-size: 2.3rem;
+							}
+							.fa-map-marker{
+								padding-top: 11px;
+								font-size: 2.8rem;
+								padding-left: 3px;
+							}
+							.glyphicon-phone-alt{
+								padding-top: 13px;
+								font-size: 2.1rem;
+							}
+							.fa-pencil-square-o{
+								padding-top: 75px;
+								font-size: 2.4rem;
+							}
+						}
+						.item-info-items{
+							position: relative;
+							padding-left: 30px;
+							width: 100%;
+							float: right;
+							.item-info-items-div1{
+								width: 100%;
+								padding-right: 210px;
+
+								input[type=text]{
+									width: 100%;
+									float: left;
+									height: 30px;
+								}
+							}
+							.item-info-items-div2{
+								width: 100%;
+								input[type=text]{
+									width: 49.15%;	
+									height: 30px;
+								}
+								.phone1{
+									float: left;
+								}
+								.phone2{
+									float: right;
+								}
+							}
+							input[type=date]{
+								width: 200px;
+								float: right;
+								height: 30px;
+							}
+							input{
+								width: 100%;
+								height: 30px;
+								margin-bottom: 10px;
+							}
+							textarea{
+								height: 150px;
+								resize: none;
+							}
+							#item-info-twzipcode{
+								width: 180px;
+								height: 30px;
+								float: left;
+								position: relative;
+								z-index: 1;
+								#item-info-county,#item-info-district{
+									float: left;
+									margin-right: 5px;
+									select{
+										height: 30px;
+										width: 85px;
+										padding: 0px;
+									}
+								}
+								#item-info-zipcode{
+									display: none;
+								}
+							}
+							.item-info-twzipcode-address{
+								width: 100%;
+								float: left;
+								margin-left: -180px;
+								padding-left: 180px;
+							}
+							.myButtonDonate{
+								background: #429396;
+								color: #FFF;
+								border-radius: 5px;
+								font-size: 18px;
+								line-height: 37px;
+								padding-left: 10px;
+								letter-spacing: 2px;
+								cursor: pointer;
+								-webkit-transition: .2s linear;
+								border: none;
+								border-bottom: 2px solid #1F6267;
+								line-height: 32px;
+								margin-top: 20px;
+								width: 90px;
+								float: right;
+								height: 35px;
+								margin-bottom: 0px;
+								&:hover{
+									opacity: .7;
+
+								}
+							}
+
+						}
+					}
+				}
+			}
+		}
+	}
+}
+#myModal-travelInfo{
+	.modal-dialog{
+		.modal-content{
+			.modal-body{
+				padding: 0;
+				img{
+					border-top-left-radius: 5px;
+					border-top-right-radius: 5px;
+				}
+			}
+			.modal-footer{
+				.dialog-travelInfo-title{
+					width: 100%;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					font-size: 24px;
+					text-align: center;
+				}
+				.dialog-travelInfo-address{
+					font-size: 22px;
+					width: 100%;
+					text-align: left;
+					margin: 5px 0 0;
+					line-height: 25px;
+					height: 25px;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					h1{
+						display: inline-block;
+						letter-spacing: 2px;
+						margin: 0;
+						font-size: 16px;
+						margin-left: 5px;
+					}
+
+				}
+				.travelInfo-iconInfo{
+					line-height: 30px;
+					height: 30px;
+					i{
+						font-size: 20px;
+						color: #797979;
+						display: inline-block;
+						cursor: pointer;
+						h2{
+							font-size: 14px;
+							margin: 0px;
+							width: 75px;
+							overflow: hidden;
+							text-overflow: ellipsis;
+							white-space: nowrap;
+							display: inline-block;
+							line-height: 14px;
+							border-right: 1px solid #ADADAD;
+						}
+						.like-count{
+							width: 50px;
+							text-align: left;
+							margin-right: 5px;
+						}
+						.travelInfo-date{
+							border: none;
+						}
+						&:hover{
+							color: #333B3C;
+							-webkit-transition: .2s linear;
+						}
+					}
+					/*.travelInfo-date{
+						margin: 0;
+						font-size: 16px;
+						color: #797979;
+						display: inline-block;
+					}*/
+				}
+				
+				.dialog-travelInfo-text{
+					max-height: 250px;
+					text-align: left;
+					border: 1px solid #C0C0C0;
+					padding: 5px 8px;
+					border-radius: 5px;
+					overflow-y: scroll;
+					overflow-x: hidden;
+				}
+			}
+		}
+	}
+}
