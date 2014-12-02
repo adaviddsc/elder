@@ -13,7 +13,7 @@ if( !empty($_GET['id']) && !empty($_SESSION['username']) ){
 		if( $result = $stmt_S_addTravelPhoto->fetch() ){
 			header('Pragma: public');
 			header('Cache-Control: max-age=86400');
-			header('Expires: '. gmdate('D, d M Y H:i:s \G\M\T', time() + 1800));
+			header('Expires: '. gmdate('D, d M Y H:i:s \G\M\T', time() + 600));
 			header('Content-Type: image/jpeg');
 			readfile('../../../elder-upload/'.$_SESSION['username'].'/'.$result->photo);
 		}

@@ -19,7 +19,8 @@ $sql = "CREATE TABLE addSelf
 	interestment varchar(50),
 	dream varchar(50),
 	love varchar(50),
-	address varchar(50)
+	address varchar(50),
+	updateTime varchar(50)
 )ENGINE=InnoDB CHARACTER SET=utf8;";
 if (!mysql_query($sql,$con)){
 	die('Could not create table: ' . mysql_error());

@@ -37,10 +37,10 @@ $(function() {
   var i=0;
   while(travel_title[i]!=null){
     if (i%2==0){
-      $('.travel-bodyLeft').append('<div class="travel-box" articleNumber="'+i+'"><div class="travel-boxImg"><img src="../readfile/readfile.php?id='+travel_photo[travel_articleID[i]][0]+'" data-toggle="modal" data-target="#myModal-travelInfo"></div><div class="travel-boxBottom"><h1 class="travel-title">'+travel_title[i]+'</h1><div class="travel-selfInfo"><img src="../images/self.jpg"><h1 class="travel-selfName">張允</h1><i class="fa fa-map-marker findPosition"></i><i class="fa fa-heart" id="travel-like"><h1 class="like-count">3895</h1></i></div></div></div>');
+      $('.travel-bodyLeft').append('<div class="travel-box" articleNumber="'+i+'"><div class="travel-boxImg"><img src="../readfile/readfile-travelPhoto.php?id='+travel_photo[travel_articleID[i]][0]+'" data-toggle="modal" data-target="#myModal-travelInfo"></div><div class="travel-boxBottom"><h1 class="travel-title">'+travel_title[i]+'</h1><div class="travel-selfInfo"><img src="../images/self.jpg"><h1 class="travel-selfName">張允</h1><i class="fa fa-map-marker findPosition"></i><i class="fa fa-heart" id="travel-like"><h1 class="like-count">3895</h1></i></div></div></div>');
     }
     if (i%2==1){
-      $('.travel-bodyRight').append('<div class="travel-box" articleNumber="'+i+'"><div class="travel-boxImg"><img src="../readfile/readfile.php?id='+travel_photo[travel_articleID[i]][0]+'" data-toggle="modal" data-target="#myModal-travelInfo"></div><div class="travel-boxBottom"><h1 class="travel-title">'+travel_title[i]+'</h1><div class="travel-selfInfo"><img src="../images/self.jpg"><h1 class="travel-selfName">張允</h1><i class="fa fa-map-marker findPosition"></i><i class="fa fa-heart" id="travel-like"><h1 class="like-count">3895</h1></i></div></div></div>');
+      $('.travel-bodyRight').append('<div class="travel-box" articleNumber="'+i+'"><div class="travel-boxImg"><img src="../readfile/readfile-travelPhoto.php?id='+travel_photo[travel_articleID[i]][0]+'" data-toggle="modal" data-target="#myModal-travelInfo"></div><div class="travel-boxBottom"><h1 class="travel-title">'+travel_title[i]+'</h1><div class="travel-selfInfo"><img src="../images/self.jpg"><h1 class="travel-selfName">張允</h1><i class="fa fa-map-marker findPosition"></i><i class="fa fa-heart" id="travel-like"><h1 class="like-count">3895</h1></i></div></div></div>');
     }
     i++;
   }
@@ -123,11 +123,11 @@ $(function() {
     while(travel_photo[travel_articleID[articleNumber]][i]!=null){
       if (i==0){
         $('#addTravel-li').append('<li data-target="#addTravel-photoGallery" data-slide-to="'+articleNumber+'" class="active"></li>');
-        $('#addTravel-img').append('<div class="item active"><img src="../readfile/readfile.php?id='+travel_photo[travel_articleID[articleNumber]][i]+'"></div>');
+        $('#addTravel-img').append('<div class="item active"><img src="../readfile/readfile-travelPhoto.php?id='+travel_photo[travel_articleID[articleNumber]][i]+'"></div>');
       }
       else{
         $('#addTravel-li').append('<li data-target="#addTravel-photoGallery" data-slide-to="'+articleNumber+'"></li>');
-        $('#addTravel-img').append('<div class="item"><img src="../readfile/readfile.php?id='+travel_photo[travel_articleID[articleNumber]][i]+'"></div>');
+        $('#addTravel-img').append('<div class="item"><img src="../readfile/readfile-travelPhoto.php?id='+travel_photo[travel_articleID[articleNumber]][i]+'"></div>');
       }
       i++;
     }

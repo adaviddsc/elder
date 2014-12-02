@@ -5,9 +5,29 @@
 }
 /* line 8, ../sass/self.scss */
 #myModal-addSelf .modal-dialog .modal-content .modal-body form #add-selfPhoto {
-  font-size: 30px;
+  font-size: 150px;
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  text-align: center;
+  margin: 0 auto;
+  cursor: pointer;
 }
-/* line 13, ../sass/self.scss */
+/* line 16, ../sass/self.scss */
+#myModal-addSelf .modal-dialog .modal-content .modal-body form #add-selfPhoto:hover {
+  opacity: .8;
+}
+/* line 21, ../sass/self.scss */
+#myModal-addSelf .modal-dialog .modal-content .modal-body img {
+  max-width: 100%;
+  max-height: 500px;
+  cursor: pointer;
+}
+/* line 25, ../sass/self.scss */
+#myModal-addSelf .modal-dialog .modal-content .modal-body img:hover {
+  opacity: .8;
+}
+/* line 29, ../sass/self.scss */
 #myModal-addSelf .modal-dialog .modal-content .modal-body input {
   margin-bottom: 5px;
 }

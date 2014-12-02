@@ -8,7 +8,7 @@ $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
 
 if( is_uploaded_file($_FILES['fileToUpload']['tmp_name'][0]) && !empty($_SESSION['username']) && !empty($_POST['title']) && !empty($_POST['addr_county']) && !empty($_POST['addr_area']) && !empty($_POST['address']) && !empty($_POST['detail']) ){
 	$num_files = count($_FILES['fileToUpload']['tmp_name']);
-	$_FILES['fileToUpload']['name'] = img_filter($_FILES['fileToUpload']['name'],$_FILES['fileToUpload']['tmp_name'],'../view/travel.php','addTravel_alert','資料未完整');
+	$_FILES['fileToUpload']['name'] = img_filter($_FILES['fileToUpload']['name'],$_FILES['fileToUpload']['tmp_name'],'../view/travel.php','addTravel_alert','資料未完整',1);
 
 
 	/*$username = $_SESSION['username'];
