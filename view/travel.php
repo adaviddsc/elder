@@ -24,6 +24,7 @@ $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
 echo "<script>"; 
 echo "self_photo = new Array();";
 echo "self_photo_update = new Array();";
+echo "self_name = new Array();";
 echo "</script>"; 
 $stmt_S_addSelf = $db->prepare("SELECT * FROM addSelf");
 $stmt_S_addSelf->execute();
@@ -31,6 +32,7 @@ while( $result = $stmt_S_addSelf->fetch() ){
 	echo "<script>";
 	echo "self_photo['".$result->username."'] = '".$result->id."';";
 	echo "self_photo_update['".$result->username."'] = '".$result->updateTime."';";
+	echo "self_name['".$result->username."'] = '".$result->name."';";
 	echo "</script>";
 }
 $stmt_S_addSelf->closeCursor();
