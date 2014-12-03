@@ -70,7 +70,6 @@ else{
 			<ul>
 	        	<li><a href="http://www.appledaily.com.tw/appledaily/article/finance/" target="iframe_b">蘋果財經新聞</a></li>
 	        	<li><a href="http://udn.com/NEWS/FINANCE/" target="iframe_b">聯合財經新聞</a></li>
-	        	<li><a href="http://www.ettoday.net/news/focus/%E8%B2%A1%E7%B6%93/" target="iframe_b">ETtoday財經新聞</a></li>
 	        	<li><a href="http://www.moneydj.com/KMDJ/" target="iframe_b">MoneyDJ理財網</a></li>	        	
 
 	        	<li><a href="http://www.ltn.com.tw/" target="iframe_b">自由電子報</a></li>
