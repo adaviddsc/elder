@@ -22,6 +22,15 @@ if( is_uploaded_file($_FILES['fileToUpload']['tmp_name']) && !empty($_SESSION['u
 		$love = $_POST['love'];
 		$address = $_POST['address'];
 
+		$name = @mysql_escape_string(htmlspecialchars($name));
+		$sex = @mysql_escape_string(htmlspecialchars($sex));
+		$age = @mysql_escape_string(htmlspecialchars($age));
+		$interestment = @mysql_escape_string(htmlspecialchars($interestment));
+		$dream = @mysql_escape_string(htmlspecialchars($dream));
+		$love = @mysql_escape_string(htmlspecialchars($love));
+		$address = @mysql_escape_string(htmlspecialchars($address));
+		
+
 		$user_dir="../../../elder-upload/";
 	    if (!is_dir($user_dir.$username)) {
 	        mkdir($user_dir.$username,0777);

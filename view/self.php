@@ -85,8 +85,8 @@ $stmt_S_addSelf->execute(array($username));
 				echo '<img class="selfPag-img" src="../readfile/readfile-selfPhoto.php?id='.$result->id.'&updateTime='.$result->updateTime.'" alt="Tank" style="width:250px;height:250px">';
 				echo '<table style="width:100%">';
 				echo '<tr>';
-				echo '<th><b><font color="#FFFFFF" size="8">貴姓大名</font></b></th>';
-				echo '<th><b><font color="#FFFFFF" size="8">'.$result->name.'</font></b></th>';
+				echo '<th style="text-align:center;"><b><font color="#FFFFFF" size="8">姓名</font></b></th>';
+				echo '<th style="text-align:center;"><b><font color="#FFFFFF" size="8">'.$result->name.'</font></b></th>';
 				echo '</tr>';
 				echo '<tr>';
 				echo '<td><b><font color="#FFFFFF" size="8">性別</font></b></td>';
@@ -118,8 +118,8 @@ $stmt_S_addSelf->execute(array($username));
 				echo '<img src="../images/user_icon.png" alt="Tank" style="width:250px;height:250px">
 				<table style="width:100%">
 				<tr>
-					<th><b><font color="#FFFFFF" size="8">貴姓大名</font></b></th>
-					<th><b><font color="#FFFFFF" size="8">請編輯</font></b></th>		
+					<th style="text-align:center;"><b><font color="#FFFFFF" size="8">姓名</font></b></th>
+					<th style="text-align:center;"><b><font color="#FFFFFF" size="8">請編輯</font></b></th>		
 				 </tr>
 				 <tr>
 					<td><b><font color="#FFFFFF" size="8">性別</font></b></td>

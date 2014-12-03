@@ -37,10 +37,11 @@ $(function() {
   var i=0;
   while(travel_title[i]!=null){
     if (i%2==0){
-      $('.travel-bodyLeft').append('<div class="travel-box" articleNumber="'+i+'"><div class="travel-boxImg"><img src="../readfile/readfile-travelPhoto.php?id='+travel_photo[travel_articleID[i]][0]+'" data-toggle="modal" data-target="#myModal-travelInfo"></div><div class="travel-boxBottom"><h1 class="travel-title">'+travel_title[i]+'</h1><div class="travel-selfInfo"><img src="../images/self.jpg"><h1 class="travel-selfName">張允</h1><i class="fa fa-map-marker findPosition"></i><i class="fa fa-heart" id="travel-like"><h1 class="like-count">3895</h1></i></div></div></div>');
+
+      $('.travel-bodyLeft').append('<div class="travel-box" articleNumber="'+i+'"><div class="travel-boxImg"><img src="../readfile/readfile-travelPhoto.php?id='+travel_photo[travel_articleID[i]][0]+'" data-toggle="modal" data-target="#myModal-travelInfo"></div><div class="travel-boxBottom"><h1 class="travel-title">'+travel_title[i]+'</h1><div class="travel-selfInfo"><img src="../readfile/readfile-selfPhoto.php?id='+self_photo[travel_username[i]]+'&updateTime='+self_photo_update[travel_username[i]]+'"><h1 class="travel-selfName">張允</h1><i class="fa fa-map-marker findPosition"></i><i class="fa fa-heart" id="travel-like"><h1 class="like-count">3895</h1></i></div></div></div>');
     }
     if (i%2==1){
-      $('.travel-bodyRight').append('<div class="travel-box" articleNumber="'+i+'"><div class="travel-boxImg"><img src="../readfile/readfile-travelPhoto.php?id='+travel_photo[travel_articleID[i]][0]+'" data-toggle="modal" data-target="#myModal-travelInfo"></div><div class="travel-boxBottom"><h1 class="travel-title">'+travel_title[i]+'</h1><div class="travel-selfInfo"><img src="../images/self.jpg"><h1 class="travel-selfName">張允</h1><i class="fa fa-map-marker findPosition"></i><i class="fa fa-heart" id="travel-like"><h1 class="like-count">3895</h1></i></div></div></div>');
+      $('.travel-bodyRight').append('<div class="travel-box" articleNumber="'+i+'"><div class="travel-boxImg"><img src="../readfile/readfile-travelPhoto.php?id='+travel_photo[travel_articleID[i]][0]+'" data-toggle="modal" data-target="#myModal-travelInfo"></div><div class="travel-boxBottom"><h1 class="travel-title">'+travel_title[i]+'</h1><div class="travel-selfInfo"><img src="../readfile/readfile-selfPhoto.php?id='+self_photo[travel_username[i]]+'&updateTime='+self_photo_update[travel_username[i]]+'"><h1 class="travel-selfName">張允</h1><i class="fa fa-map-marker findPosition"></i><i class="fa fa-heart" id="travel-like"><h1 class="like-count">3895</h1></i></div></div></div>');
     }
     i++;
   }
