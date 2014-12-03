@@ -2,12 +2,20 @@
 session_start();
 include("connect.php");
 include("img_filter.php");
+$num_files = count($_FILES['fileToUpload']['tmp_name']);
+for($i=0; $i < $num_files;$i++)
+{
+	if( $_FILES['fileToUpload']['error'][$i] ) {
+		$_SESSION['addTravel_alert'] = '上傳檔案請小於8M';
+	    header('Location: ../view/travel.php');
+	    exit(0);
+	}
+}
 $dsn = "mysql:host=$host_name;dbname=$db_name;charset=utf8";
 $db = new PDO($dsn, $user_name, $password);
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
 
 if( is_uploaded_file($_FILES['fileToUpload']['tmp_name'][0]) && !empty($_SESSION['username']) && !empty($_POST['title']) && !empty($_POST['addr_county']) && !empty($_POST['addr_area']) && !empty($_POST['address']) && !empty($_POST['detail']) ){
-	$num_files = count($_FILES['fileToUpload']['tmp_name']);
 	$_FILES['fileToUpload']['name'] = img_filter($_FILES['fileToUpload']['name'],$_FILES['fileToUpload']['tmp_name'],'../view/travel.php','addTravel_alert','資料未完整',1);
 
 
@@ -49,8 +57,8 @@ if( is_uploaded_file($_FILES['fileToUpload']['tmp_name'][0]) && !empty($_SESSION
 	        move_uploaded_file( $_FILES['fileToUpload']["tmp_name"][$i], iconv("utf-8", "big5", "../../../elder-upload/".$username."/".$_FILES['fileToUpload']["name"][$i]) );
 	        $PhotoAddress= $_FILES['fileToUpload']["name"][$i];
 	    }
-	    $stmt_I_addTravelPhoto = $db->prepare("INSERT INTO addTravelPhoto (articleID,photo) VALUES (?,?)");
-	    $stmt_I_addTravelPhoto->execute(array($uniqid,$PhotoAddress));
+	    $stmt_I_addTravelPhoto = $db->prepare("INSERT INTO addTravelPhoto (username,articleID,photo) VALUES (?,?,?)");
+	    $stmt_I_addTravelPhoto->execute(array($username,$uniqid,$PhotoAddress));
 	}
 	$stmt_I_addTravelPhoto->closeCursor();
 }

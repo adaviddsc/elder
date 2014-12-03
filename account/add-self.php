@@ -2,10 +2,14 @@
 session_start();
 include("connect.php");
 include("img_filter.php");
+if( $_FILES['fileToUpload']['error'] ) {
+	$_SESSION['addSelf_alert'] = '上傳檔案請小於8M';
+    header('Location: ../view/self.php');
+    exit(0);
+}
 $dsn = "mysql:host=$host_name;dbname=$db_name;charset=utf8";
 $db = new PDO($dsn, $user_name, $password);
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
-
 
 
 

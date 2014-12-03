@@ -8,14 +8,14 @@ if( !empty($_GET['id']) && !empty($_SESSION['username']) ){
 		$dsn = "mysql:host=$host_name;dbname=$db_name;charset=utf8";
 		$db = new PDO($dsn, $user_name, $password);
 		$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
-		$stmt_S_addTravelPhoto = $db->prepare("SELECT photo FROM addTravelPhoto WHERE id=?");
+		$stmt_S_addTravelPhoto = $db->prepare("SELECT username,photo FROM addTravelPhoto WHERE id=?");
 		$stmt_S_addTravelPhoto->execute(array($id));
 		if( $result = $stmt_S_addTravelPhoto->fetch() ){
 			header('Pragma: public');
 			header('Cache-Control: max-age=86400');
 			header('Expires: '. gmdate('D, d M Y H:i:s \G\M\T', time() + 600));
 			header('Content-Type: image/jpeg');
-			readfile('../../../elder-upload/'.$_SESSION['username'].'/'.$result->photo);
+			readfile('../../../elder-upload/'.$result->username.'/'.$result->photo);
 		}
 		$db = null;
 	}

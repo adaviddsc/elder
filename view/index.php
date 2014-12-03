@@ -1,5 +1,6 @@
 <?php
 session_start();
+header("Content-Type:text/html; charset=utf-8");
 include("../account/connect.php");
 $dsn = "mysql:host=$host_name;dbname=$db_name";
 $db = new PDO($dsn, $user_name, $password);
