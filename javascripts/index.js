@@ -77,7 +77,7 @@ $(function() {
 						    type: "post",
 						    dataType: "json",
 						    success: function(response) {
-						    	if(response[0].remove){
+						    	if(response[0].remove=="success"){
 						    		$(".login-message").text("帳號或密碼錯誤");
 						    	}
 						    },

@@ -164,7 +164,7 @@ $stmt_S_addSelf->execute(array($username));
 		        		<i class="fa fa-camera-retro" ></i>
 		        	</div>
 					<img id="add-selfPhoto-img">
-					<input class="add-selfPhoto-input" type="file" name="fileToUpload" style="display:none;"/ accept="image/*">
+					<input class="add-selfPhoto-input" type="file" name="fileToUpload" style="display:none;" accept="image/*">
 		        	<br>
 		        	姓名<input class="form-control" name="name" type="text" maxlength="50">
 		        	性別<input class="form-control" name="sex" type="text" maxlength="50">

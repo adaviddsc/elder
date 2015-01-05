@@ -19,7 +19,7 @@ if( is_uploaded_file($_FILES['fileToUpload']['tmp_name'][0]) && !empty($_SESSION
 	$_FILES['fileToUpload']['name'] = img_filter($_FILES['fileToUpload']['name'],$_FILES['fileToUpload']['tmp_name'],'../view/travel.php','addTravel_alert','資料未完整',1);
 
 
-	/*$username = $_SESSION['username'];
+	$username = $_SESSION['username'];
 	$title = mysql_real_escape_string(htmlspecialchars($_POST['title']));
 	$date = $today = date('Y-m-d');
 	$address = mysql_real_escape_string(htmlspecialchars($_POST['addr_county'].$_POST['addr_area'].$_POST['address']));
@@ -27,7 +27,7 @@ if( is_uploaded_file($_FILES['fileToUpload']['tmp_name'][0]) && !empty($_SESSION
 	$detail = $_POST['detail'];
 	$detail = str_replace(" ","&nbsp",$detail);
 	$detail = str_replace("\n","",$detail);
-	$detail = mysql_real_escape_string(htmlspecialchars(preg_replace("/\s/","<br>",$detail)));*/
+	$detail = mysql_real_escape_string(htmlspecialchars(preg_replace("/\s/","<br>",$detail)));
 	$username = $_SESSION['username'];
 	$title = $_POST['title'];
 	$date = $today = date('Y-m-d');
@@ -37,14 +37,14 @@ if( is_uploaded_file($_FILES['fileToUpload']['tmp_name'][0]) && !empty($_SESSION
 	$detail = str_replace(" ","&nbsp",$detail);
 	$detail = str_replace("\n","",$detail);
 	$detail = preg_replace("/\s/","<br>",$detail);
+	$sick = implode(",",$_POST['sick']);
 
 	$title = @mysql_escape_string(htmlspecialchars($title));
 	$address = @mysql_escape_string(htmlspecialchars($address));
 	$detail = @mysql_escape_string(htmlspecialchars($detail));
-
 	$uniqid = md5(uniqid(rand()));
-	$stmt_I_addTravel = $db->prepare("INSERT INTO addTravel (username, title, date, address, detail, articleID) VALUES (?,?,?,?,?,?)");
-	$stmt_I_addTravel->execute(array($username,$title,$date,$address,$detail,$uniqid));
+	$stmt_I_addTravel = $db->prepare("INSERT INTO addTravel (username, title, date, address, detail, sick, articleID) VALUES (?,?,?,?,?,?,?)");
+	$stmt_I_addTravel->execute(array($username,$title,$date,$address,$detail,$sick,$uniqid));
 	$stmt_I_addTravel->closeCursor();
 
 	for($i=0; $i < $num_files;$i++)

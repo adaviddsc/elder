@@ -68,10 +68,18 @@ echo "travel_title = new Array();";
 echo "travel_date = new Array();";
 echo "travel_address = new Array();";
 echo "travel_detail = new Array();";
+echo "travel_sick = new Array();";
 echo "travel_articleID = new Array();";
 echo "</script>";
 $travel_length = 0;
-$stmt_S_addTravel = $db->prepare("SELECT * FROM addTravel ORDER BY id DESC");
+
+if ( isset($_GET["search"]) ){
+	$search = $_GET["search"];
+	$stmt_S_addTravel = $db->prepare("SELECT * FROM addTravel WHERE title LIKE '%$search%' ORDER BY id DESC");
+}
+else{
+	$stmt_S_addTravel = $db->prepare("SELECT * FROM addTravel ORDER BY id DESC");
+}
 $stmt_S_addTravel->execute();
 while( $result = $stmt_S_addTravel->fetch() ){
 	echo "<script>";
@@ -80,6 +88,7 @@ while( $result = $stmt_S_addTravel->fetch() ){
 	echo "travel_date[".$travel_length."] = '".$result->date."';";
 	echo "travel_address[".$travel_length."] = '".$result->address."';";
 	echo "travel_detail[".$travel_length."] = '".$result->detail."';";
+	echo "travel_sick[".$travel_length."] = '".str_replace(","," ",$result->sick)."';";
 	echo "travel_articleID[".$travel_length."] = '".$result->articleID."';";
 	echo "</script>";
 	$travel_length++;
@@ -122,6 +131,49 @@ $stmt_S_addTravel->closeCursor();
 					<h1 class="travel-name">旅遊記事</h1>
 					<div class="travel-addArticle" data-toggle="modal" data-target="#myModal-addTravel"><i class="fa fa-plus"></i>新增遊記</div>
 				</div>
+				<div>
+					<i id="search-btn" class="fa fa-search"></i>
+					<input type="text" class="form-control" id="search-input">
+				</div>
+				<div class="sick-avoid-div">
+					<ul class="sick-avoid">
+						<li value="all" class="active">全部</li>
+						<li value="a">高血壓</li>
+						<li value="b">低血壓</li>
+						<li value="c">心臟病</li>
+						<li value="d">肥胖症</li>
+						<li value="e">癌症</li>
+					</ul>
+				</div>
+				<style>
+				#search-input{
+					position: relative;
+				}
+				#search-btn{
+					position: absolute;
+					right: 10px;
+					margin-top: 6px;
+					font-size: 20px;
+					z-index: 1;
+					cursor: pointer;
+				}
+				.sick-avoid{
+					text-align: center;
+				}
+				.sick-avoid li{
+					display: inline-block;
+					cursor: pointer;
+					background: #eee;
+					width: 70px;
+					height: 25px;
+					text-align: center;
+					line-height: 25px;
+				}
+				.sick-avoid .active{
+					background: #000;
+					color: #fff;
+				}
+				</style>
 				<div class="travel-body">
 					<div class="travel-bodyLeft travel-bodyContain">
 					</div>
@@ -146,7 +198,6 @@ $stmt_S_addTravel->closeCursor();
 							<img id="add-travelPhoto-pre">
 							<input class="item-info-images-input" type="file" name="fileToUpload[]" multiple="" style="display:none;"/ accept="image/*">
 						</div>
-						
 
 						<div class="item-info-tags">
 							<span class="fa fa-tag"></span>
@@ -167,6 +218,23 @@ $stmt_S_addTravel->closeCursor();
 								<input type="text" name="address" class="form-control" placeholder="地址">
 							</div>
 							<textarea class="form-control" name="detail" placeholder="細節"></textarea>
+							<div class="sub-text-content">
+								<label class="checkbox-inline">
+								  <input type="checkbox" class="checkbox" name="sick[]" value="a">高血壓  
+								</label>
+								<label class="checkbox-inline">
+								  <input type="checkbox" class="checkbox" name="sick[]" value="b">低血壓
+								</label>
+								<label class="checkbox-inline">
+								  <input type="checkbox" class="checkbox" name="sick[]" value="c">心臟病
+								</label>
+								<label class="checkbox-inline">
+								  <input type="checkbox" class="checkbox" name="sick[]" value="d">肥胖症
+								</label>
+								<label class="checkbox-inline">
+								  <input type="checkbox" class="checkbox" name="sick[]" value="e">癌症
+								</label>
+							</div>
 							<input type="submit" class="myButtonDonate" value="提交">
 						</div>
 					</form>
