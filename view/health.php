@@ -12,11 +12,12 @@ else{
 <html>
      <head>
      <title>後青春的日子</title>
-    	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<link rel="stylesheet" href="../stylesheets/health.css">
+		<link rel="stylesheet" href="stylesheets/index.css">
+		<link rel="stylesheet" href="stylesheets/animate.css">
+		<script type="text/javascript" src="javascripts/index.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<script type="text/javascript" src="../javascripts/health.js"></script>
-
 		<script>
 		function Event(n,e){
 			if(e == "true"){
@@ -30,55 +31,65 @@ else{
      </head>
      
 	 <body>
-		<div id="header">
-			<h1> <font color="#FFFFFF"> 本月線上教學課程! Ready? GO~~</font> </h1>
-		        
-		<table align='center'>
-		<tr><td><b><font face="微軟正黑體" size="3">高齡養生健康食譜</font></b></td>
-		<td><font face="微軟正黑體" size="3"><a href='../health/1.pdf' target='_blank'>下載</a></font></td></tr>
-		<tr><td><b><font face="微軟正黑體" size="3">唱歌看電影我最行</font></b></td>
-		<td><font face="微軟正黑體" size="3"><a href='../health/entertainment.pdf' target='_blank'>下載</a></font></td></tr>
-		<tr><td><b><font face="微軟正黑體" size="3">防跌健康操</font></b></td>
-		<td><font face="微軟正黑體" size="3"><a href='../health/exercise.pdf' target='_blank'>下載</a></font></td>	</tr>
-		<tr><td><b><font face="微軟正黑體" size="3">Facebook使用教學</font></b></td>
-		<td><font face="微軟正黑體" size="3"><a href='../health/fb.pdf' target='_blank'>下載</a></font></td></tr>
-	
-		<tr><td><b><font face="微軟正黑體" size="3">Google搜尋</font></b></td>
-		<td><font face="微軟正黑體" size="3"><a href='../health/google.pdf' target='_blank'>下載</a></font></td></tr>
-		</table>
+	    <div id="st1" class="st">
+		 <div class="inner">
+		  <h1>樂活推薦網</h1>
+
+		   <div class="box">
+				<a href='http://ylohas.tcfst.org.tw/'  target='_blank'> <img src="view/images/1.png" width="488px" height="150px"></img> </a>
+				<a href='http://www.5bobe.com.tw/'  target='_blank'> <img src="view/images/5bobe.png" width="488px" height="150px"></img> </a>
+		   </div>
+
+		   <div class="box">
+				<a href='http://www.happyold.net/happyold.html' target='_blank'> <img src="view/images/老人樂園.png" width="488px" height="150px"></img> </a>
+				<a href='http://silverpsynews.blogspot.tw/' target='_blank'> <img src="view/images/2.png" width="488px" height="150px"></img> </a>
+		   </div>		  	  
+		 </div>
 
 		</div>
-		<div id="div2"> </div>
-		
-		
-		
 
-		<div id="command"> 
-			<h1> <font color="#FFFFFF"> 樂活網站推薦區</font> </h1>
-			<ul>
-	        	<li><a href="http://www.happyold.net/" target="iframe_a" >happyold</a></li>
-	        	<li><a href="http://ylohas.tcfst.org.tw/" target="iframe_a">養樂網</a></li>
-	        	<li><a href="http://www.5bobe.com.tw/" target="iframe_a">5bobe熟齡網</a></li>
-	           	<li><a href="http://afterthatday.blogspot.com/" target="iframe_a">病後人生</a></li>
-            </ul>		
-		<iframe width="100%" height=500px" src="../health/health.html" name="iframe_a"> </iframe>		 
-        </div> 
-        <div id="div2"> </div>
-	
+		<div id="st3" class="st">
+		 <div class="inner">
+		  <h1>健康新生活</h1>
 
-		<div id="news">
-				    <h1> <font color="#FFFFFF"> 財經+新聞專區 </font> </h1>
-			<ul>
-	        	<li><a href="http://www.appledaily.com.tw/appledaily/article/finance/" target="iframe_b">蘋果財經新聞</a></li>
-	        	<li><a href="http://udn.com/NEWS/FINANCE/" target="iframe_b">聯合財經新聞</a></li>
-	        	<li><a href="http://www.moneydj.com/KMDJ/" target="iframe_b">MoneyDJ理財網</a></li>	        	
+		   <div class="box">
+				<a href='view/1.pdf'  target='_blank'> <img src="view/images/1pdf.png" width="480px" height="150px"></img> </a>
+				<a href='view/entertainment.pdf'  target='_blank'> <img src="view/images/2pdf.png" width="480px" height="150px"></img> </a>
+		   </div>
 
-	        	<li><a href="http://www.ltn.com.tw/" target="iframe_b">自由電子報</a></li>
-	        	<li><a href="http://www.appledaily.com.tw/realtimenews/section/new/" target="iframe_b">蘋果即時新問</a></li>
-	        	<li><a href="http://udn.com/News/BreakingNews.jsp" target="iframe_b">聯合即時新問</a></li>        	
-            </ul>		
-		<iframe width="100%" height=500px" src="health-pag1.html" name="iframe_b"> </iframe>
-		</div>  
+		   <div class="box">
+				<a href='view/photo.pdf'  target='_blank'> <img src="view/images/3pdf.png" width="480px" height="150px"></img> </a>
+				<a href='view/hospital.pdf'  target='_blank'> <img src="view/images/4pdf.png" width="480px" height="150px"></img> </a>
+		   </div>
+
+		   <div class="box">
+				<a href='view/exercise.pdf'  target='_blank'> <img src="view/images/5pdf.png" width="480px" height="150px"></img> </a>
+				<a href='view/train.pdf'  target='_blank'> <img src="view/images/6pdf.png" width="480px" height="150px"></img> </a>
+		   </div>
+
+		 </div>
+
+		</div>
+
+		<div id="st2" class="st">
+		 <div class="inner">
+		  <h1>財經新聞網</h1>
+
+		   <div class="box">
+				<a href='http://www.appledaily.com.tw/appledaily/article/finance/'  target='_blank'> <img src="view/images/4.png" width="478px" height="150px"></img> </a>
+				<a href='http://udn.com/news/cate/6644'  target='_blank'> <img src="view/images/5.png" width="478px" height="150px"></img> </a>					
+		   </div>
+		   <div class="box">
+		        <a href='http://www.ettoday.net/news/focus/%E8%B2%A1%E7%B6%93/'  target='_blank'> <img src="view/images/7.png" width="478px" height="150px"></img> </a>
+				<a href='http://www.moneydj.com/KMDJ/'  target='_blank'> <img src="view/images/6.png" width="478px" height="150px"></img> </a>	
+							
+		   </div>
+
+		    
+		 </div>
+
+		</div>
+		
 
 	 </body>
 
@@ -93,5 +104,5 @@ else{
 		});
      </script>
 	 
-
+ 
 </html>

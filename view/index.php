@@ -27,9 +27,8 @@ echo "</script>";
 ?>
 <!DOCTYPE html>
 <html>
-  <title>後青春的日子</title>
-	<head>
-		<meta charset="utf-8" />
+<head>
+    <meta charset="utf-8" />
     <meta name="google-site-verification" content="XFLWzNxG-0JQU8yG3B2TlUhqelQSp49V9UaKUZqy-eE" />
     <meta name="robots" content="index,follow" />
     <meta name="keywords" content="後青春的日子" />
@@ -48,43 +47,25 @@ echo "</script>";
     <script type="text/javascript" src="../javascripts/index.js"></script>
     <link rel="stylesheet" href="../stylesheets/index.css">
     <link rel="stylesheet" href="../stylesheets/selectbar.css">
-    <style>
-      h1{
-        font-size:1000%;
-        color:white;
-        text-align:center;
-      }
-      body{
-
-        background-image:url(../images/back3.jpg);
-        background-size: 100% 1000px;
-        background-repeat:no-repeat;
-      }
-
-
-
-      </style>
-	</head>
-  <body>
+    <link rel="stylesheet" href="style.css"> 
+  </head>
+<body>
+  </br></br></br></br></br></br></br></br></br></br></br></br>
   <?php
   if(!isset($_SESSION['username'])){
     echo '<div id="selectbar">';
-    echo '<ul>';
-    echo '<li><a page="self.php" href="#" class="enter-door" data-toggle="modal" data-target="#myModal-login">個人頁</a></li>';
-    echo '<li><a page="travel.php" href="#" class="enter-door" data-toggle="modal" data-target="#myModal-login">夢想遊記</a></li>';
-    echo '<li><a page="health.php" href="#" class="enter-door" data-toggle="modal" data-target="#myModal-login">樂活資訊</a></li>';
-    echo '<li><a href="#" data-toggle="modal" data-target="#myModal-regist">註冊</a></li>';
-    echo '</ul>';
+    echo '<p id="p1"><a page="self.php" href="#" class="enter-door" data-toggle="modal" data-target="#myModal-login"><img src="button-1.png"></a></p>';
+    echo '<p id="p2"><a page="travel.php" href="#" class="enter-door" data-toggle="modal" data-target="#myModal-login"><img src="button-2.png"></a></p>';
+    echo '<p id="p3"><a page="health.php" href="#" class="enter-door" data-toggle="modal" data-target="#myModal-login"><img src="button-3.png"></a></p>';
+    echo '<p id="p4"><a href="#" data-toggle="modal" data-target="#myModal-regist"><img src="button-4.png"></a></p>';
     echo '</div>';
   }
   else{
     echo '<div id="selectbar">';
-    echo '<ul>';
-    echo '<li><a href="self.php">個人頁</a></li>';
-    echo '<li><a href="travel.php">夢想遊記</a></li>';
-    echo '<li><a href="health.php">樂活資訊</a></li>';
-    echo '<li><a href="#" data-toggle="modal" data-target="#myModal-regist">註冊</a></li>';
-    echo '</ul>';
+    echo '<p id="p1"><a href="self.php"><img src="button-1.png"></a></p>';
+    echo '<p id="p2"><a href="travel.php"><img src="button-2.png"></a></p>';
+    echo '<p id="p3"><a href="health.php"><img src="button-3.png"></a></p>';
+    echo '<p id="p4"><a href="#" data-toggle="modal" data-target="#myModal-regist"><img src="button-4.png"></a></p>';
     echo '</div>';
   }
   ?>
@@ -139,3 +120,18 @@ echo "</script>";
   </body>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 </html>
+
+
+
+<!--
+</br></br></br></br></br></br></br></br></br></br></br></br>
+<p id="p1"><a href=""><img src="button-1.png"></a></p>
+<p id="p2"><a href=""><img src="button-2.png"></a></p>
+<p id="p3"><a href=""><img src="button-3.png"></a></p>
+<p id="p4"><a href=""><img src="button-4.png"></a></p>
+
+
+  
+
+</body>
+</html>-->

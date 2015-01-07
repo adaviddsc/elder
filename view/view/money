@@ -1,0 +1,12 @@
+<!DOCTYPE HTML>
+<html>
+     <head>
+		<link rel="stylesheet" href="../stylesheets/index.css">
+		<link rel="stylesheet" href="../stylesheets/animate.css">
+		<script type="text/javascript" src="../javascripts/index.js"></script>		
+     </head>
+	 <body>
+		<img src="../stylesheets/images/財神.jpg" height="300" width="400">
+	 </body>
+	
+</html>

@@ -1,0 +1,19 @@
+body{
+	margin:0;
+	padding:0;
+	background:url(index-background.jpg) center center fixed no-repeat;
+	-moz-background-size: cover;
+	background-size: cover;
+}
+#p1{
+	padding-left:78%;
+}
+#p2{
+	padding-left:73%;
+}
+#p3{
+	padding-left:66%;
+}
+#p4{
+	padding-left:62%;
+}
