@@ -1,0 +1,217 @@
+@font-face {
+	font-family: 'Arvo-Regular';
+	src: url('../fonts/Arvo-Regular.eot');
+	src: local('☺'),  url('../fonts/Arvo-Regular.woff') format('woff'),  url('../fonts/Arvo-Regular.ttf') format('truetype'),  url('../fonts/Arvo-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+body {
+	background-color: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+}
+img 
+{
+	border: 50%;
+}	
+table 
+{
+table-layout: fixed;
+word-wrap:break-word;
+}
+/*------------------------------ HEADER ------------------------------*/
+#header {
+	background: url(../images/bg-header.png) repeat-x left bottom;
+	background-position: 0 bottom;
+	padding: 1px 10px 85px;
+	text-align: right;
+}
+#header > div {
+	width: 960px;
+	margin: 0 auto;
+}
+#header > div:after {
+	clear: both;
+	content: "";
+	display: block;
+	height: 0;
+	line-height: 0;
+	visibility: hidden;
+}
+/*------------------------------ CONTENTS ------------------------------*/
+#contents {
+	background-color: #f1f1cd;
+	padding: 20px 0 40px;
+}
+#contents > div:after {
+	clear: both;
+	content: "";
+	display: block;
+	height: 0;
+	line-height: 0;
+	visibility: hidden;
+}
+#contents .body {
+	background-color: #fff;
+	height: auto;
+	width: 900px;
+	margin: 0 auto;
+	border: 1px solid #d1daac;
+	padding: 0 29px;
+}
+#contents h1 {
+	color: #de0da5;
+	font-family: 'Arvo-Regular';
+	font-weight: normal;
+	margin: 30px 0 20px;
+}
+#contents p {
+	font-size: 14px;
+	line-height: 30px;
+	margin: 0;
+	padding: 0 0 30px;
+	text-align: justify;
+}
+#contents p a {
+	color: #000;
+}
+#contents p > a:hover {
+	color: #550974;
+}
+#contents p em {
+	color: #7a1ba2;
+	display: block;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 16px;
+	font-style: normal;
+}
+#contents p em a {
+	color: #7a1ba2;
+	text-decoration: none;
+}
+#contents p em a:hover {
+	text-decoration: underline;
+}
+/** Adbox **/
+#adbox {
+	font-family: 'Arvo-Regular';
+	width: 940px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+#adbox img {
+	float: left;
+	margin-right: 60px;
+}
+#adbox h1 {
+	color: #710b9b;
+	font-size: 75px;
+	margin: 0 0 10px;
+	padding-top: 60px;
+	text-transform: uppercase;
+}
+#adbox p {
+	color: #710b9b;
+	font-size: 20px;
+	line-height: 40px;
+}
+.CSSTableGenerator 
+			{
+				margin:0px;padding:0px;
+				width:100%;
+				box-shadow: 10px 10px 5px #888888;
+				border:1px solid #000000;
+				
+				-moz-border-radius-bottomleft:12px;
+				-webkit-border-bottom-left-radius:12px;
+				border-bottom-left-radius:12px;
+				
+				-moz-border-radius-bottomright:12px;
+				-webkit-border-bottom-right-radius:12px;
+				border-bottom-right-radius:12px;
+				
+				-moz-border-radius-topright:12px;
+				-webkit-border-top-right-radius:12px;
+				border-top-right-radius:12px;
+				
+				-moz-border-radius-topleft:12px;
+				-webkit-border-top-left-radius:12px;
+				border-top-left-radius:12px;
+			}
+			.CSSTableGenerator table
+			{
+				border-collapse: collapse;
+				border-spacing: 0;
+				width:100%;
+				height:100%;
+				margin:0px;padding:0px;
+			}
+			.CSSTableGenerator tr:last-child td:last-child 
+			{
+				-moz-border-radius-bottomright:12px;
+				-webkit-border-bottom-right-radius:12px;
+				border-bottom-right-radius:12px;
+			}
+			.CSSTableGenerator table tr:first-child td:first-child {
+				-moz-border-radius-topleft:12px;
+				-webkit-border-top-left-radius:12px;
+				border-top-left-radius:12px;
+			}
+			.CSSTableGenerator table tr:first-child td:last-child {
+				-moz-border-radius-topright:12px;
+				-webkit-border-top-right-radius:12px;
+				border-top-right-radius:12px;
+			}.CSSTableGenerator tr:last-child td:first-child{
+				-moz-border-radius-bottomleft:12px;
+				-webkit-border-bottom-left-radius:12px;
+				border-bottom-left-radius:12px;
+			}.CSSTableGenerator tr:hover td{
+				
+			}
+			.CSSTableGenerator tr:nth-child(odd){ background-color:#aaaaff; }
+			.CSSTableGenerator tr:nth-child(even)    { background-color:#ffffff; }.CSSTableGenerator td{
+				vertical-align:middle;
+				
+				
+				border:1px solid #000000;
+				border-width:0px 1px 1px 0px;
+				text-align:center;
+				padding:7px;
+				font-size:20px;
+				font-family:Arial;
+				font-weight:normal;
+				color:#000000;
+			}.CSSTableGenerator tr:last-child td{
+				border-width:0px 1px 0px 0px;
+			}.CSSTableGenerator tr td:last-child{
+				border-width:0px 0px 1px 0px;
+			}.CSSTableGenerator tr:last-child td:last-child{
+				border-width:0px 0px 0px 0px;
+			}
+			.CSSTableGenerator tr:first-child td{
+					background:-o-linear-gradient(bottom, #aaaaff 5%, #aaaaff 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #aaaaff), color-stop(1, #aaaaff) );
+				background:-moz-linear-gradient( center top, #aaaaff 5%, #aaaaff 100% );
+				filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#aaaaff", endColorstr="#aaaaff");	background: -o-linear-gradient(top,#aaaaff,aaaaff);
+
+				background-color:#aaaaff;
+				border:0px solid #000000;
+				text-align:center;
+				border-width:0px 0px 1px 1px;
+				font-size:20px;
+				font-family:Arial;
+				font-weight:normal;
+				color:#000000;
+			}
+			.CSSTableGenerator tr:first-child:hover td{
+				background:-o-linear-gradient(bottom, #aaaaff 5%, #aaaaff 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #aaaaff), color-stop(1, #aaaaff) );
+				background:-moz-linear-gradient( center top, #aaaaff 5%, #aaaaff 100% );
+				filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#aaaaff", endColorstr="#aaaaff");	background: -o-linear-gradient(top,#aaaaff,aaaaff);
+
+				background-color:#aaaaff;
+			}
+			.CSSTableGenerator tr:first-child td:first-child{
+				border-width:0px 0px 1px 0px;
+			}
+			.CSSTableGenerator tr:first-child td:last-child{
+				border-width:0px 0px 1px 1px;
+			}

@@ -26,20 +26,19 @@ $stmt_S_addSelf->execute(array($username));
 ?>
 <!DOCTYPE html>
 <html>
-	<title>後青春的日子</title>
-	<head>
-
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
-		<link rel="stylesheet" href="../external/sweetalert-master/lib/sweet-alert.css">
-		<script type="text/javascript" src="../external/sweetalert-master/lib/sweet-alert.js"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script> 
-		<script type="text/javascript" src="../javascripts/self.js"></script>
-		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="../stylesheets/animate.css">
-		<link rel="stylesheet" href="../stylesheets/self.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+<title>後青春的日子</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+	<link rel="stylesheet" href="../external/sweetalert-master/lib/sweet-alert.css">
+	<script type="text/javascript" src="../external/sweetalert-master/lib/sweet-alert.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script> 
+	<script type="text/javascript" src="../javascripts/self.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+		
 		<style>
 		body
 		{
@@ -69,89 +68,145 @@ $stmt_S_addSelf->execute(array($username));
 			background:#efefef;
 		}
 		</style>
-	</head>
 
-	<body>
-		<div id="section">
-			<br>
-		    <a href=""><font color="#FFFFFF" size="5">個人資料</font></a>
-			<a href=""><font color="#FFFFFF" size="5">旅遊日誌</font></a>
-			<a href="album.php"><font color="#FFFFFF" size="5">個人相簿</font></a><br>	
-			<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal-addSelf">修改個人資訊</button>
-			<h2><font color="#FFFFFF" size="10">個人資料</font></h2>
-			<?php
-			if ( $result = $stmt_S_addSelf->fetch() ){
-
-				echo '<img class="selfPag-img" src="../readfile/readfile-selfPhoto.php?id='.$result->id.'&updateTime='.$result->updateTime.'" alt="Tank" style="width:250px;height:250px">';
-				echo '<table style="width:100%">';
-				echo '<tr>';
-				echo '<th style="text-align:center;"><b><font color="#FFFFFF" size="8">姓名</font></b></th>';
-				echo '<th style="text-align:center;"><b><font color="#FFFFFF" size="8">'.$result->name.'</font></b></th>';
-				echo '</tr>';
-				echo '<tr>';
-				echo '<td><b><font color="#FFFFFF" size="8">性別</font></b></td>';
-				echo '<td><b><font color="#FFFFFF" size="8">'.$result->sex.'</font></b></td>';
-				echo '</tr>';
-				echo '<tr>';
-				echo '<td><b><font color="#FFFFFF" size="8">年齡</font></b></td>';
-				echo '<td><b><font color="#FFFFFF" size="8">'.$result->age.'</font></b></td>';
-				echo '</tr>';
-				echo '<tr>';
-				echo '<td><b><font color="#FFFFFF" size="8">興趣</font></b></td>';
-				echo '<td><b><font color="#FFFFFF" size="8">'.$result->interestment.'</font></b></td>';
-				echo '</tr>';
-				echo '<tr>';
-				echo '<td><b><font color="#FFFFFF" size="8">夢想</font></b></td>';
-				echo '<td><b><font color="#FFFFFF" size="8">'.$result->dream.'</font></b></td>';
-				echo '</tr>';
-				echo '<tr>';
-				echo '<td><b><font color="#FFFFFF" size="8">感情狀態</font></b></td>';
-				echo '<td><b><font color="#FFFFFF" size="8">'.$result->love.'</font></b></td>';
-				echo '</tr>';
-				echo '<tr>';
-				echo '<td><b><font color="#FFFFFF" size="8">哪裡人</font></b></td>';
-				echo '<td><b><font color="#FFFFFF" size="8">'.$result->address.'</font></b></td>';
-				echo '</tr>';
-				echo '</table>';
-			}
-			else{
-				echo '<img src="../images/user_icon.png" alt="Tank" style="width:250px;height:250px">
-				<table style="width:100%">
-				<tr>
-					<th style="text-align:center;"><b><font color="#FFFFFF" size="8">姓名</font></b></th>
-					<th style="text-align:center;"><b><font color="#FFFFFF" size="8">請編輯</font></b></th>		
-				 </tr>
-				 <tr>
-					<td><b><font color="#FFFFFF" size="8">性別</font></b></td>
-					<td><b><font color="#FFFFFF" size="8">請編輯</font></b></td>		
-				 </tr>
-				 <tr>
-					<td><b><font color="#FFFFFF" size="8">年齡</font></b></td>
-					<td><b><font color="#FFFFFF" size="8">請編輯</font></b></td>		
-				 </tr>
-				 <tr>
-					<td><b><font color="#FFFFFF" size="8">興趣</font></b></td>
-					<td><b><font color="#FFFFFF" size="8">請編輯</font></b></td>		
-				 </tr>
-				 <tr>
-					<td><b><font color="#FFFFFF" size="8">夢想</font></b></td>
-					<td><b><font color="#FFFFFF" size="8">請編輯</font></b></td>		
-				 </tr>
-				 <tr>
-					<td><b><font color="#FFFFFF" size="8">感情狀態</font></b></td>
-					<td><b><font color="#FFFFFF" size="8">請編輯</font></b></td>		
-				 </tr>
-				 <tr>
-					<td><b><font color="#FFFFFF" size="8">哪裡人</font></b></td>
-					<td><b><font color="#FFFFFF" size="8">請編輯</font></b></td>		
-				 </tr>
-			 </table>';
-			}
-			$stmt_S_addSelf->closeCursor();
-
-			?>
+</head>
+<body>
+	<div id="header">
+	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal-addSelf">修改個人資訊</button>
+	</div>
+	<?php
+	if ( $result = $stmt_S_addSelf->fetch() ){
+	echo '<div id="contents">
+		<div id="adbox">
+			<img src="../readfile/readfile-selfPhoto.php?id='.$result->id.'&updateTime='.$result->updateTime.'" alt="Img">
+			<h1>'.$result->name.'</h1>
 		</div>
-		<div class="modal fade" id="myModal-addSelf" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div id="featured" class="body">
+			<p><br></p>
+			<div class="CSSTableGenerator" >
+					<table width=100%>
+						<tr>
+							<td width=50%>
+								姓名
+							</td>
+							<td width=50%>
+								'.$result->name.'
+							</td>
+						</tr>
+						<tr>
+							<td width=50%>
+								年齡
+							</td>
+							<td width=50%>
+								'.$result->age.'
+							</td>
+						</tr>
+						<tr>
+							<td width=50%>
+								生日
+							</td>
+							<td width=50%>
+								'.$result->sex.'
+							</td>
+						</tr>
+						<tr>
+							<td width=50%>
+								興趣
+							</td>
+							<td width=50%>
+								'.$result->interestment.'
+							</td>
+						</tr>
+						<tr>
+							<td width=50%>
+								個人簡介
+							</td>
+							<td width=50%>
+								'.$result->dream.'
+							</td>
+						</tr>
+						<tr>
+							<td width=50%>
+								經歷
+							</td>
+							<td width=50%>
+								'.$result->love.'
+							</td>
+						</tr>
+					</table>
+				</div>
+				<p><br></p>
+			</div>
+		</div>
+	</div>';
+	}
+	else{
+		echo '<div id="contents">
+		<div id="adbox">
+			<img src="../images/user_icon.png" alt="Img">
+			<h1>請編輯</h1>
+		</div>
+		<div id="featured" class="body">
+			<p><br></p>
+			<div class="CSSTableGenerator" >
+					<table width=100%>
+						<tr>
+							<td width=50%>
+								姓名
+							</td>
+							<td width=50%>
+								請編輯
+							</td>
+						</tr>
+						<tr>
+							<td width=50%>
+								年齡
+							</td>
+							<td width=50%>
+								請編輯
+							</td>
+						</tr>
+						<tr>
+							<td width=50%>
+								生日
+							</td>
+							<td width=50%>
+								請編輯
+							</td>
+						</tr>
+						<tr>
+							<td width=50%>
+								興趣
+							</td>
+							<td width=50%>
+								請編輯
+							</td>
+						</tr>
+						<tr>
+							<td width=50%>
+								個人簡介
+							</td>
+							<td width=50%>
+								請編輯
+							</td>
+						</tr>
+						<tr>
+							<td width=50%>
+								經歷
+							</td>
+							<td width=50%>
+								請編輯
+							</td>
+						</tr>
+					</table>
+				</div>
+				<p><br></p>
+			</div>
+		</div>
+	</div>';
+	}
+	?>
+	<div class="modal fade" id="myModal-addSelf" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		  <div class="modal-dialog">
 		    <div class="modal-content">
 		      <div class="modal-header">
@@ -167,18 +222,17 @@ $stmt_S_addSelf->execute(array($username));
 					<input class="add-selfPhoto-input" type="file" name="fileToUpload" style="display:none;" accept="image/*">
 		        	<br>
 		        	姓名<input class="form-control" name="name" type="text" maxlength="50">
-		        	性別<input class="form-control" name="sex" type="text" maxlength="50">
 		        	年齡<input class="form-control" name="age" type="text" maxlength="50">
+		        	生日<input class="form-control" name="sex" type="text" maxlength="50">
 		        	興趣<input class="form-control" name="interestment" type="text" maxlength="50">
-		        	夢想<input class="form-control" name="dream" type="text" maxlength="50">
-		        	感情狀態<input class="form-control" name="love" type="text" maxlength="50">
-		        	哪裡人<input class="form-control" name="address" type="text" maxlength="50">
+		        	個人簡介<input class="form-control" name="dream" type="text" maxlength="50">
+		        	經歷<input class="form-control" name="love" type="text" maxlength="50">
 		        	<input type="submit" class="btn btn-primary" value="修改">
 		        </form>
 		      </div>
 		    </div>
 		  </div>
 		</div>
-	</body>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+</body>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 </html>

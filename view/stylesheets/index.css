@@ -25,12 +25,13 @@ h1,p{
 
 .st {
  color: white;
- height: 534px;
- width: 80%;
+ height: 1000px;
+ width: 33%;
  overflow: auto; 
  margin: 1.2em auto 0;
  text-align: justify;
- border:1px solid rgb(60%,60%,60%);
+ padding-left: 10px;
+ float: left;
 
 }
 
@@ -48,7 +49,7 @@ h1,p{
 #st1 h1 {
  background: rgba(40%,0%,0%,0.6);
  border-top: 2em solid;
- border-right: 260px solid;
+ border-right: 150px solid;
  border-bottom: 0.5em solid;
  border-color: rgba(100%,100%,100%,0.2); 
 }
@@ -74,9 +75,17 @@ h1,p{
 #st2 h1 {
  background: rgba(20%,40%,90%,0.6);
  border-top: 2em solid;
- border-right: 260px solid;
+ border-right: 150px solid;
  border-bottom: 0.5em solid;
  border-color: rgba(100%,100%,100%,0.2); 
+}
+
+#st2 p {
+ background: rgba(0%,10%,20%,0.6);
+ border-top: 12px solid rgba(100%,100%,100%,0.4);
+ border-right: 12px solid rgba(55%,55%,65%,0.4);
+ border-bottom: 12px solid rgba(30%,30%,40%,0.4);
+ border-left: 12px solid rgba(80%,80%,90%,0.4);
 }
 
 #st3 .inner {
@@ -93,13 +102,13 @@ h1,p{
 #st3 h1 {
  background: rgba(10%,50%,20%,0.6);
  border-top: 2em solid;
- border-right: 260px solid;
+ border-right: 150px solid;
  border-bottom: 0.5em solid;
  border-color: rgba(100%,100%,100%,0.2); 
 }
 
 #st1 .box{
-	width: 1000px;
+	width: 370px;
 	height: 160px;
 	padding-top: 10px ;	
 	background-repeat: no-repeat;
@@ -109,7 +118,7 @@ h1,p{
 
 
 #st2 .box{
-	width: 1000px;
+	width: 370px;
 	height: 160px;
 	padding-top: 10px ;
 	border-left: 20px solid;
@@ -119,7 +128,7 @@ h1,p{
 }
 
 #st3 .box{
-	width: 1000px;
+	width: 370px;
 	height: 160px;
 	padding-top: 10px ;
 	background-repeat: no-repeat;

@@ -13,8 +13,8 @@ $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
 
 
 
-if( is_uploaded_file($_FILES['fileToUpload']['tmp_name']) && !empty($_SESSION['username']) && !empty($_POST['name']) && !empty($_POST['sex']) && !empty($_POST['age']) && !empty($_POST['interestment']) && !empty($_POST['dream']) && !empty($_POST['love']) && !empty($_POST['address']) ){
-	if( !isset($_POST['name'][50]) && !isset($_POST['sex'][50]) && !isset($_POST['age'][50]) && !isset($_POST['interestment'][50]) && !isset($_POST['dream'][50]) && !isset($_POST['love'][50]) && !isset($_POST['address'][50]) ){
+//if( is_uploaded_file($_FILES['fileToUpload']['tmp_name']) && !empty($_SESSION['username']) && !empty($_POST['name']) && !empty($_POST['sex']) && !empty($_POST['age']) && !empty($_POST['interestment']) && !empty($_POST['dream']) && !empty($_POST['love']) && !empty($_POST['address']) ){
+	//if( !isset($_POST['name'][50]) && !isset($_POST['sex'][50]) && !isset($_POST['age'][50]) && !isset($_POST['interestment'][50]) && !isset($_POST['dream'][50]) && !isset($_POST['love'][50]) && !isset($_POST['address'][50]) ){
 		$_FILES['fileToUpload']['name'] = img_filter($_FILES['fileToUpload']['name'],$_FILES['fileToUpload']['tmp_name'],'../view/self.php','addSelf_alert','資料未完整',0);
 
 		$username = $_SESSION['username'];
@@ -59,18 +59,18 @@ if( is_uploaded_file($_FILES['fileToUpload']['tmp_name']) && !empty($_SESSION['u
 		}
 		$stmt_S_addSelf->closeCursor();
 
-	}
+	/*}
 	else{
 		$_SESSION['addSelf_alert'] = '資料未完整';
 	    header('Location: ../view/self.php');
 	    exit(0);
-	}
-}
+	}*/
+/*}
 else{
 	$_SESSION['addSelf_alert'] = '資料未完整';
     header('Location: ../view/self.php');
     exit(0);
-}
+}*/
 
 
 
