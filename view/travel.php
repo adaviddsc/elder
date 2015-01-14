@@ -138,11 +138,16 @@ $stmt_S_addTravel->closeCursor();
 				<div class="sick-avoid-div">
 					<ul class="sick-avoid">
 						<li value="all" class="active">全部</li>
-						<li value="a">高血壓</li>
-						<li value="b">低血壓</li>
-						<li value="c">心臟病</li>
-						<li value="d">肥胖症</li>
-						<li value="e">癌症</li>
+						<li value="a">心臟病</li>
+						<li value="b">高山症</li>
+						<li value="c">糖尿病</li>
+						<li value="d">氣喘</li>
+						<li value="e">氣胸</li>
+						<li value="f">小兒麻痺</li>
+						<li value="g">過敏</li>
+						<li value="h">旱鴨子</li>
+						<li value="i">骨質疏鬆</li>
+						<li value="j">帥哥</li>
 					</ul>
 				</div>
 				<style>
@@ -220,19 +225,34 @@ $stmt_S_addTravel->closeCursor();
 							<textarea class="form-control" name="detail" placeholder="細節"></textarea>
 							<div class="sub-text-content">
 								<label class="checkbox-inline">
-								  <input type="checkbox" class="checkbox" name="sick[]" value="a">高血壓  
+								  <input type="checkbox" class="checkbox" name="sick[]" value="a">心臟病  
 								</label>
 								<label class="checkbox-inline">
-								  <input type="checkbox" class="checkbox" name="sick[]" value="b">低血壓
+								  <input type="checkbox" class="checkbox" name="sick[]" value="b">高山症
 								</label>
 								<label class="checkbox-inline">
-								  <input type="checkbox" class="checkbox" name="sick[]" value="c">心臟病
+								  <input type="checkbox" class="checkbox" name="sick[]" value="c">糖尿病
 								</label>
 								<label class="checkbox-inline">
-								  <input type="checkbox" class="checkbox" name="sick[]" value="d">肥胖症
+								  <input type="checkbox" class="checkbox" name="sick[]" value="d">氣喘
 								</label>
 								<label class="checkbox-inline">
-								  <input type="checkbox" class="checkbox" name="sick[]" value="e">癌症
+								  <input type="checkbox" class="checkbox" name="sick[]" value="e">氣胸
+								</label>
+								<label class="checkbox-inline">
+								  <input type="checkbox" class="checkbox" name="sick[]" value="f">小兒麻痺
+								</label>
+								<label class="checkbox-inline">
+								  <input type="checkbox" class="checkbox" name="sick[]" value="g">過敏
+								</label>
+								<label class="checkbox-inline">
+								  <input type="checkbox" class="checkbox" name="sick[]" value="h">旱鴨子
+								</label>
+								<label class="checkbox-inline">
+								  <input type="checkbox" class="checkbox" name="sick[]" value="i">骨質疏鬆
+								</label>
+								<label class="checkbox-inline">
+								  <input type="checkbox" class="checkbox" name="sick[]" value="j">帥哥
 								</label>
 							</div>
 							<input type="submit" class="myButtonDonate" value="提交">
@@ -272,9 +292,6 @@ $stmt_S_addTravel->closeCursor();
 		        	<h1></h1>
 		        </div>
 		        <div class="travelInfo-iconInfo">
-		        	<i class="fa fa-heart" id="travelInfo-like">
-						<h2 class="like-count">3895</h2>
-					</i>
 					<i class="fa fa-calendar">
 						<h2 class="travelInfo-date"></h2>
 					</i>
