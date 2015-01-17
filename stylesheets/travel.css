@@ -349,7 +349,6 @@ body {
 }
 /* line 306, ../sass/travel.scss */
 #myModal-addTravel .modal-dialog .modal-content .modal-body .item-info .item-info-form .item-info-items input {
-  width: 100%;
   height: 30px;
   margin-bottom: 10px;
 }
