@@ -40,19 +40,19 @@ else{
 
 		          
 		   <div class="box">
-				<a href='http://ylohas.tcfst.org.tw/'  target='_blank'> <img src="view/images/1.png" width="100%" height="150px"></img> </a>				
+				<a href='http://ylohas.tcfst.org.tw/'  target='_blank'> <img src="view/images/1.png" width="107%" height="150px"></img> </a>				
 		   </div>
 
 		    <div class="box">
-		   <a href='http://www.5bobe.com.tw/'  target='_blank'> <img src="view/images/5bobe.png" width="100%" height="150px"></img> </a>
+		   <a href='http://www.5bobe.com.tw/'  target='_blank'> <img src="view/images/5bobe.png" width="107%" height="150px"></img> </a>
 		    </div>
 
 		   <div class="box">
-				<a href='http://www.happyold.net/happyold.html' target='_blank'> <img src="view/images/老人樂園.png" width="100%" height="150px"></img> </a>				
+				<a href='http://www.happyold.net/happyold.html' target='_blank'> <img src="view/images/老人樂園.png" width="107%" height="150px"></img> </a>				
 		   </div>
 		   
 		   <div class="box">
-		   <a href='http://silverpsynews.blogspot.tw/' target='_blank'> <img src="view/images/2.png" width="100%" height="150px"></img> </a>
+		   <a href='http://silverpsynews.blogspot.tw/' target='_blank'> <img src="view/images/2.png" width="107%" height="150px"></img> </a>
 		   </div>		  	  
 		 </div>
 
@@ -63,18 +63,18 @@ else{
 		  <h1>健康新生活</h1>
 
 		   <div class="box">
-				<a href='view/1.pdf'  target='_blank'> <img src="view/images/1pdf.png" width="100%" height="150px"></img> </a>				
+				<a href='view/1.pdf'  target='_blank'> <img src="view/images/1pdf.png" width="107%" height="150px"></img> </a>				
 		   </div>
 
 		   <div class="box">
-		   <a href='view/entertainment.pdf'  target='_blank'> <img src="view/images/2pdf.png" width="100%" height="150px"></img> </a>
+		   <a href='view/entertainment.pdf'  target='_blank'> <img src="view/images/2pdf.png" width="107%" height="150px"></img> </a>
 		   </div>
 
 		   <div class="box">
-				<a href='view/photo.pdf'  target='_blank'> <img src="view/images/3pdf.png" width="100%" height="150px"></img> </a>				
+				<a href='view/photo.pdf'  target='_blank'> <img src="view/images/3pdf.png" width="107%" height="150px"></img> </a>				
 		   </div>
 		   <div class="box">
-		   <a href='view/hospital.pdf'  target='_blank'> <img src="view/images/4pdf.png" width="100%" height="150px"></img> </a>
+		   <a href='view/hospital.pdf'  target='_blank'> <img src="view/images/4pdf.png" width="107%" height="150px"></img> </a>
 		   </div>
 		   
 		 </div>
@@ -86,16 +86,16 @@ else{
 		  <h1>財經新聞網</h1>
 
 		   <div class="box">
-				<a href='http://www.appledaily.com.tw/appledaily/article/finance/'  target='_blank'> <img src="view/images/4.png" width="100%" height="150px"></img> </a>								
+				<a href='http://www.appledaily.com.tw/appledaily/article/finance/'  target='_blank'> <img src="view/images/4.png" width="107%" height="150px"></img> </a>								
 		   </div>
 		   <div class="box">
-		   <a href='http://udn.com/news/cate/6644'  target='_blank'> <img src="view/images/5.png" width="100%" height="150px"></img> </a>	
+		   <a href='http://udn.com/news/cate/6644'  target='_blank'> <img src="view/images/5.png" width="107%" height="150px"></img> </a>	
 		   </div>
 		   <div class="box">
-		        <a href='http://www.ettoday.net/news/focus/%E8%B2%A1%E7%B6%93/'  target='_blank'> <img src="view/images/7.png" width="100%" height="150px"></img> </a>										
+		        <a href='http://www.ettoday.net/news/focus/%E8%B2%A1%E7%B6%93/'  target='_blank'> <img src="view/images/7.png" width="107%" height="150px"></img> </a>										
 		   </div>
 		   <div class="box">
-		   <a href='http://www.moneydj.com/KMDJ/'  target='_blank'> <img src="view/images/6.png" width="100%" height="150px"></img> </a>	
+		   <a href='http://www.moneydj.com/KMDJ/'  target='_blank'> <img src="view/images/6.png" width="107%" height="150px"></img> </a>	
 
 			</div>
 		    
